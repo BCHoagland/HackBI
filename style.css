@@ -303,7 +303,7 @@ body {
 /*COMPUTERS*/
 @media screen and (min-width: 992px) {
 	body {
-		font-size: 14px;
+		font-size: 10px;
 	}
 	
 	.main .row {
