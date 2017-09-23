@@ -22,7 +22,18 @@ function updateHideShow() {
 	});
 }
 
+function setJumbotronHeight() {
+	$screenHeight = $(window).height();
+	$('.main').css('height', $screenHeight + "px");
+
+	$mainTextHeight = $('#main-text').height();
+	// $topMargin = (($screenHeight - $mainTextHeight) / 2) - ($mainTextHeight / 2);
+	$topMargin = (($screenHeight - ($mainTextHeight * 2)) / 2)
+	$('#main-text').css('margin-top', $topMargin + "px");
+}
+
 $(document).ready(function() {
+	setJumbotronHeight();
 	formatForMobile();
 	updateHideShow();
 	$(window).scroll(function() {
