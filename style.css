@@ -233,7 +233,7 @@ body {
 	opacity: 0.7;
 }
 
-.learn-more a:active, .learn-more h1:active, .learn-more h3:active {
+.learn-more .make-translucent:active {
 	opacity: 0.4;
 }
 
