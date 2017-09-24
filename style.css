@@ -7,8 +7,6 @@
 
 	--complement-color: #465298;
 
-	--register-color: #3d8;
-	/*--panel-color: #f7f7f7;*/
 	--panel-color: #fff;
 
 	--font-color: #888;
@@ -185,6 +183,11 @@ a:hover {
   	#465298 80px,
   	#465298 160px
 	);
+}
+
+.faq a {
+	color: #fff;
+	font-weight: bold;
 }
 
 .faq .qa {
