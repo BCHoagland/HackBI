@@ -132,7 +132,7 @@ a:hover {
 
 .main h1 {
 	color: var(--theme-color-dark);
-	font-size: 8em;
+	font-size: 7em;
 	font-family: Jaapokki;
 	border: 10px solid var(--theme-color-dark);
 	display: inline;
