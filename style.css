@@ -382,10 +382,6 @@ a:hover {
 		padding-bottom: 10em;
 	}
 
-	.main h1 {
-		font-size: 2em;
-	}
-
 	.info .box:first-child {
 		border-right: 2px solid var(--theme-color-dark);
 		border-bottom-width: 0;
