@@ -32,7 +32,7 @@ function setJumbotronHeight() {
 }
 
 $(document).ready(function() {
-	setJumbotronHeight();
+	//setJumbotronHeight();
 	formatForMobile();
 	updateHideShow();
 	$(window).scroll(function() {
