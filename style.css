@@ -347,8 +347,7 @@ a:hover {
 	}
 
 	.main h1 {
-		font-size: 3em;
-		color: #fff;
+		font-size: 4em;
 	}
 
 	.info .box:first-child {
@@ -381,6 +380,10 @@ a:hover {
 
 	.main .row {
 		padding-bottom: 10em;
+	}
+
+	.main h1 {
+		font-size: 2em;
 	}
 
 	.info .box:first-child {
