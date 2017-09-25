@@ -8,6 +8,7 @@ function fixScheduleAndItemsHeight() {
 function formatForDesktop() {
 	$screenWidth = $(window).width();
 	if ($screenWidth >= 768) {
+		alert("we on desktop");
 		fixScheduleAndItemsHeight();
 		setJumbotronHeight();
 	}
@@ -33,7 +34,6 @@ function setJumbotronHeight() {
 }
 
 $(document).ready(function() {
-	formatForDesktop();
 	formatForDesktop();
 	updateHideShow();
 	$(window).scroll(function() {
