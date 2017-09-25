@@ -11,6 +11,8 @@ function formatForDesktop() {
 		alert("we on desktop");
 		fixScheduleAndItemsHeight();
 		setJumbotronHeight();
+	} else {
+		alert("we on mobile");
 	}
 }
 
