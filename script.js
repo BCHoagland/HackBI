@@ -35,12 +35,11 @@ $(document).ready(function() {
 	//setJumbotronHeight();
 	formatForMobile();
 	updateHideShow();
-	alert("you got here");
 	$(window).scroll(function() {
 		updateHideShow();
 	});
 
-	/*$("a").on('click', function(event) {
+	$("a").on('click', function(event) {
 
 		// Make sure this.hash has a value before overriding default behavior
 		if (this.hash !== "") {
@@ -60,5 +59,5 @@ $(document).ready(function() {
 				window.location.hash = hash;
 			});
 		} // End if
-	});*/
+	});
 });
