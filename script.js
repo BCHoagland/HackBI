@@ -5,10 +5,11 @@ function fixScheduleAndItemsHeight() {
 	$('.items').css('height', $heightToSet);
 }
 
-function formatForMobile() {
+function formatForDesktop() {
 	$screenWidth = $(window).width();
-	if ($screenWidth >= 0/*768*/) {
+	if ($screenWidth >= 768) {
 		fixScheduleAndItemsHeight();
+		setJumbotronHeight();
 	}
 }
 
@@ -32,8 +33,8 @@ function setJumbotronHeight() {
 }
 
 $(document).ready(function() {
-	formatForMobile();
-	setJumbotronHeight();
+	formatForDesktop();
+	formatForDesktop();
 	updateHideShow();
 	$(window).scroll(function() {
 		updateHideShow();
