@@ -5,14 +5,13 @@ function fixScheduleAndItemsHeight() {
 	$('.items').css('height', $heightToSet);
 }
 
-function formatForDesktop() {
+function formatForDesktopOrMobile() {
 	$screenWidth = $(window).width();
 	if ($screenWidth >= 768) {
-		alert("we on desktop");
 		fixScheduleAndItemsHeight();
-		setJumbotronHeight();
+		setJumbotronHeight(true);
 	} else {
-		alert("we on mobile");
+		setJumbotronHeight(false);
 	}
 }
 
@@ -26,17 +25,20 @@ function updateHideShow() {
 	});
 }
 
-function setJumbotronHeight() {
+function setJumbotronHeight(mobile) {
 	$screenHeight = $(window).height();
 	$('.main').css('height', $screenHeight + "px");
 
 	$mainTextHeight = $('#main-text').height();
-	$topMargin = (($screenHeight - ($mainTextHeight * 2)) / 2)
-	$('#main-text').css('margin-top', $topMargin + "px");
+	$topMargin = (($screenHeight - ($mainTextHeight * 2)) / 2);
+
+	if (desktop) {
+		$('#main-text').css('margin-top', $topMargin + "px");
+	}
 }
 
 $(document).ready(function() {
-	formatForDesktop();
+	formatForDesktopOrMobile();
 	updateHideShow();
 	$(window).scroll(function() {
 		updateHideShow();
