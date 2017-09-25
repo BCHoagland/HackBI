@@ -35,6 +35,7 @@ $(document).ready(function() {
 	//setJumbotronHeight();
 	formatForMobile();
 	updateHideShow();
+	alert("you got here");
 	$(window).scroll(function() {
 		updateHideShow();
 	});
