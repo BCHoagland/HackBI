@@ -25,7 +25,7 @@ function updateHideShow() {
 	});
 }
 
-function setJumbotronHeight(mobile) {
+function setJumbotronHeight(desktop) {
 	$screenHeight = $(window).height();
 	$('.main').css('height', $screenHeight + "px");
 
