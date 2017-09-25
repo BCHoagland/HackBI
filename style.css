@@ -130,7 +130,7 @@ a:hover {
 
 .main h1 {
 	/*color: var(--theme-color-dark);*/
-	color: #0ff;
+	color: #ff0;
 	font-size: 8rem;
 	font-family: Jaapokki;
 	border: 10px solid var(--theme-color-dark);
@@ -353,7 +353,7 @@ a:hover {
 	}
 
 	.main h1 {
-		font-size: 4rem;
+		font-size: 7rem;
 	}
 
 	.info .box:first-child {
