@@ -129,10 +129,10 @@ a:hover {
 }
 
 .main h1 {
-	color: #fff;
+	color: var(--theme-color-dark);
 	font-size: 8rem;
 	font-family: Jaapokki;
-	border: 10px solid #fff;
+	border: 10px solid var(--theme-color-dark);
 	display: inline;
 	padding: 20px 20px 0 20px;
 	white-space: nowrap;
