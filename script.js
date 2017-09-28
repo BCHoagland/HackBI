@@ -37,6 +37,42 @@ function setJumbotronHeight(desktop) {
 	}
 }
 
+var code = [1, 2, 3, 4, 2, 4, 1, 2];
+var givenCode = [];
+
+function checkCode() {
+	var tempNumToCheck = givenCode[givenCode.length - 1];
+	for (var i = 0; i < givenCode.length; i++) {
+		if (givenCode[i] != code[i]) {
+			givenCode = [];
+		} else {
+			if (i == (code.length - 1)) {
+				window.location.href = "1/2/3/4/shook/spooked.png";
+			}
+		}
+	}
+	if (tempNumToCheck == code[0] && givenCode.length == 0) {
+		givenCode.push(tempNumToCheck);
+	}
+}
+
+$('#scheduleLink').click(function() {
+	givenCode.push(1);
+	checkCode();
+});
+$('#faqLink').click(function() {
+	givenCode.push(2);
+	checkCode();
+});
+$('#mapLink').click(function() {
+	givenCode.push(3);
+	checkCode();
+});
+$('#registerLink').click(function() {
+	givenCode.push(4);
+	checkCode();
+});
+
 $(document).ready(function() {
 	formatForDesktopOrMobile();
 	updateHideShow();
