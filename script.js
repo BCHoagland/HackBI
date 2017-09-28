@@ -41,6 +41,7 @@ var code = [1, 2, 3, 4, 2, 4, 1, 2];
 var givenCode = [];
 
 function checkCode() {
+	var tempNumToCheck = givenCode[givenCode.length - 1];
 	for (var i = 0; i < givenCode.length; i++) {
 		if (givenCode[i] != code[i]) {
 			givenCode = [];
@@ -50,11 +51,12 @@ function checkCode() {
 			}
 		}
 	}
+	if (tempNumToCheck == code[0] && givenCode.length == 0) {
+		givenCode.push(tempNumToCheck);
+	}
 }
 
 $('#scheduleLink').click(function() {
-	givenCode.push(1);
-	checkCode();
 	givenCode.push(1);
 	checkCode();
 });
