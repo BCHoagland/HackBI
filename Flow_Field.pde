@@ -14,7 +14,6 @@ void setup() {
   size(1000, 760, P2D);
 
   background(0);
-  hint(DISABLE_DEPTH_MASK);
 
   cols = floor(width/scl);
   rows = floor(height/scl);
