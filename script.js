@@ -47,6 +47,7 @@ function checkCode() {
 		} else {
 			if (i == code.length) {
 				window.location.href = "hackbi.org/1/2/3/4/shook/spooked.png";
+			}
 		}
 	}
 	alert(givenCode.join("\n"));
