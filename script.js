@@ -45,7 +45,7 @@ function checkCode() {
 		if (givenCode[i] != code[i]) {
 			givenCode = [];
 		} else {
-			if (i == code.length) {
+			if (i == (code.length - 1)) {
 				alert("got em");
 				window.location.href = "hackbi.org/1/2/3/4/shook/spooked.png";
 			}
