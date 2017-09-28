@@ -46,7 +46,6 @@ function checkCode() {
 			givenCode = [];
 		} else {
 			if (i == (code.length - 1)) {
-				alert("got em");
 				window.location.href = "1/2/3/4/shook/spooked.png";
 			}
 		}
@@ -54,6 +53,8 @@ function checkCode() {
 }
 
 $('#scheduleLink').click(function() {
+	givenCode.push(1);
+	checkCode();
 	givenCode.push(1);
 	checkCode();
 });
