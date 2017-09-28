@@ -30,7 +30,7 @@ function setJumbotronHeight(desktop) {
 	$('.main').css('height', $screenHeight + "px");
 
 	$mainTextHeight = $('#main-text').height();
-	$topMargin = (($screenHeight - ($mainTextHeight * 2)) / 2);
+	$topMargin = (($screenHeight - ($mainTextHeight * 1.5)) / 2);
 
 	if (desktop) {
 		$('#main-text').css('margin-top', $topMargin + "px");

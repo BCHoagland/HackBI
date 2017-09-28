@@ -1,9 +1,20 @@
-:root {--theme-color-light: #fccdd5;
+:root {
+	--theme-color-light: #fccdd5;
 	--theme-color: #fc8d95;
-	--theme-color-dark: #fc636a;
+	/*--theme-color-dark: #ff3d45;*/
+	--theme-color-dark: #fff;
 
-	--bg-light: rgba(252, 205, 213, 0.8);
-	--bg-dark: rgba(252, 61, 69, 0.9);
+	--border-color: #fc3d45;
+
+	--bg1: #606dbc;
+	--bg2: #465298;
+
+	/*--theme-color-light: #fccdd5;
+	--theme-color: #606dbc;
+	--theme-color-dark: #465298;
+
+	--bg1: #fcafb4;
+	--bg2: #ff8894;*/
 
 	--complement-color: #465298;
 
@@ -114,10 +125,10 @@ a:hover {
 
 	background: repeating-linear-gradient(
   	45deg,
-  	rgba(96,109,188, 1),
-  	rgba(96,109,188, 1) 100px,
-  	rgba(70,82,152, 1) 100px,
-  	rgba(70,82,152, 1) 200px
+  	var(--bg1),
+  	var(--bg1) 80px,
+  	var(--bg2) 80px,
+  	var(--bg2) 160px
 	), url("img/bg.jpg");
 	background-size: cover;
 	text-align: center;
@@ -180,10 +191,10 @@ a:hover {
 	margin-right: 0;
 	background: repeating-linear-gradient(
   	-45deg,
-  	#606dbc,
-  	#606dbc 80px,
-  	#465298 80px,
-  	#465298 160px
+  	var(--bg1),
+  	var(--bg1) 80px,
+  	var(--bg2) 80px,
+  	var(--bg2) 160px
 	);
 }
 
@@ -203,9 +214,11 @@ a:hover {
 .faq .qa h3:first-child {
 	/*color: var(--theme-color);*/
 	color: var(--theme-color-dark);
+	font-size: 1.6em;
 	font-weight: bold;
+	padding-bottom: 15px;
 	margin-top: 0;
-	margin-bottom: 20px;
+	border-bottom: 2px solid var(--border-color);
 }
 
 .faq .qa h3:last-child {
@@ -264,10 +277,10 @@ a:hover {
 #register {
 	background: repeating-linear-gradient(
   	45deg,
-  	#606dbc,
-  	#606dbc 80px,
-  	#465298 80px,
-  	#465298 160px
+		var(--bg1),
+  	var(--bg1) 80px,
+  	var(--bg2) 80px,
+  	var(--bg2) 160px
 	);
 	/*background: repeating-linear-gradient(
 	  45deg,
@@ -281,7 +294,7 @@ a:hover {
 }
 
 #register .row:first-child .box {
-	border-bottom: 2px solid var(--theme-color-dark);
+	border-bottom: 2px solid var(--border-color);
 	padding-bottom: 2em;
 	margin-bottom: 2em;
 }
@@ -357,7 +370,7 @@ a:hover {
 
 	.info .box:first-child {
 		border-right-width: 0;
-		border-bottom: 2px solid var(--theme-color-dark);
+		border-bottom: 2px solid var(--border-colors);
 	}
 
 	.map #map {
@@ -388,7 +401,7 @@ a:hover {
 	}
 
 	.info .box:first-child {
-		border-right: 2px solid var(--theme-color-dark);
+		border-right: 2px solid var(--border-color);
 		border-bottom-width: 0;
 	}
 
@@ -416,7 +429,7 @@ a:hover {
 	}
 
  	.info .box:first-child {
-		border-right: 2px solid var(--theme-color-dark);
+		border-right: 2px solid var(--border-color);
 		border-bottom-width: 0;
 	}
 
