@@ -47,11 +47,10 @@ function checkCode() {
 		} else {
 			if (i == (code.length - 1)) {
 				alert("got em");
-				window.location.href = "hackbi.org/1/2/3/4/shook/spooked.png";
+				window.location.href = "1/2/3/4/shook/spooked.png";
 			}
 		}
 	}
-	alert(givenCode.join("\n"));
 }
 
 $('#scheduleLink').click(function() {
