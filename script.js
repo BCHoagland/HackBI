@@ -41,6 +41,11 @@ var code = [1, 2, 3, 4, 2, 4, 1, 2];
 var givenCode = [];
 
 function checkCode() {
+	for (var i = 0; i < givenCode.length; i++) {
+		if (givenCode[i] != code[i]) {
+			givenCode = [];
+		}
+	}
 	alert(givenCode.join("\n"));
 }
 
