@@ -23,6 +23,17 @@
 	--font-color: #888;
 }
 
+* {
+	z-index: 150;
+}
+
+#defaultCanvas0 {
+	position: absolute;
+	top:0;
+	left: 0;
+	z-index: 100;
+}
+
 @font-face {
   font-family: Jaapokki;
   src:  url('fonts/Jaapokki-Regular.otf'), url('/fonts/Jaapokki-Regular.otf');
