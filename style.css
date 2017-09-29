@@ -370,7 +370,7 @@ a:hover {
 
 	.info .box:first-child {
 		border-right-width: 0;
-		border-bottom: 2px solid var(--border-colors);
+		border-bottom: 2px solid var(--border-color);
 	}
 
 	.map #map {
