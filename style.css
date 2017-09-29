@@ -122,7 +122,6 @@ a:hover {
 
 	/*background: linear-gradient(135deg, var(--bg-light), var(--bg-dark)), url("img/bg.jpg") no-repeat;*/
 
-
 	background: repeating-linear-gradient(
   	45deg,
   	var(--bg1),
