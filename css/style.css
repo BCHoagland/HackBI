@@ -64,6 +64,7 @@ body {
 }
 
 .main, .faq, #bottom-bar {
+	-webkit-filter: brightness(95%);
 	filter: brightness(95%);
 }
 
