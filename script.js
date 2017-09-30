@@ -5,6 +5,7 @@ function fixScheduleAndItemsHeight() {
 	$('.items').css('height', $heightToSet);
 }
 
+//sets proper formatting for jumbotron and info panels based on device
 function formatForDesktopOrMobile() {
 	$screenWidth = $(window).width();
 	if ($screenWidth >= 768) {
@@ -15,6 +16,7 @@ function formatForDesktopOrMobile() {
 	}
 }
 
+//reveal .hideme elements when they enter the window
 function updateHideShow() {
 	$('.hideme').each( function(i) {
 		var bottom_of_object = $(this).offset().top + ($(this).outerHeight() / 2);
@@ -25,6 +27,8 @@ function updateHideShow() {
 	});
 }
 
+//set the jumbotron height to fill the screen
+//vertically center logo text if user is on dekstop
 function setJumbotronHeight(desktop) {
 	$screenHeight = $(window).height();
 	$('.main').css('height', $screenHeight + "px");
@@ -37,6 +41,7 @@ function setJumbotronHeight(desktop) {
 	}
 }
 
+//<3 easter eggs
 var code = [1, 2, 3, 4, 2, 4, 1, 2];
 var givenCode = [];
 
@@ -80,6 +85,7 @@ $(document).ready(function() {
 		updateHideShow();
 	});
 
+	//smooth scrolling for anchor links
 	$('a[href^="#"]').on('click',function (e) {
 	    e.preventDefault();
 

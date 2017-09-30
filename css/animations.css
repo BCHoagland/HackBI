@@ -1,0 +1,27 @@
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-4rem) scale(.8);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes barber {
+	0% {
+		background-position-x: 0%;
+	}
+	100% {
+		background-position-x: 450%;
+	}
+}
+
+@keyframes reverse-barber {
+	0% {
+		background-position-x: 450%;
+	}
+	100% {
+		background-position-x: 0%;
+	}
+}
