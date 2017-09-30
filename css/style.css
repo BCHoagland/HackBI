@@ -63,6 +63,10 @@ body {
 	margin-right: 0;
 }
 
+.main, .info, #bottom-bar {
+	filter: brightness(95%);
+}
+
 .main .row, .info .row, .faq .row, .sponsors .row, .map .row {
 	/*font-family: Consolas, 'Andale Mono', Helvetica, sans-serif;*/
 	font-family: Montserrat, Metrophobic;
