@@ -16,7 +16,7 @@ body {
 	min-width: 440px;
 }
 
-.hideme {
+/*.hideme {
 	opacity:0;
 	-webkit-transition: opacity 1s, top 1s;
 	-moz-transition: opacity 1s, top 1s;
@@ -30,7 +30,7 @@ body {
 	opacity:1 !important;
 	position: relative;
 	top: 0;
-}
+}*/
 
 /**********NAVBAR**********/
 .nav {
