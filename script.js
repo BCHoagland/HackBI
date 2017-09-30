@@ -80,9 +80,9 @@ $('#registerLink').click(function() {
 
 $(document).ready(function() {
 	formatForDesktopOrMobile();
-	updateHideShow();
+	//updateHideShow();
 	$(window).scroll(function() {
-		updateHideShow();
+		//updateHideShow();
 	});
 
 	//smooth scrolling for anchor links
