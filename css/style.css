@@ -63,7 +63,7 @@ body {
 	margin-right: 0;
 }
 
-.main, .info, #bottom-bar {
+.main, .faq, #bottom-bar {
 	filter: brightness(95%);
 }
 
