@@ -93,9 +93,10 @@ body {
   	var(--bg-dark) 80px,
   	var(--bg-dark) 160px
 	), url("img/bg.jpg");
-	animation: barber 400s infinite linear;
+	/*animation: barber 400s infinite linear;
 	background-size: 226px 226px;
-	background-position-x: 0%;
+	background-position-x: 0%;*/
+	background-size: cover;
 	text-align: center;
 }
 
@@ -172,9 +173,10 @@ body {
   	var(--bg-dark)80px,
   	var(--bg-dark) 160px
 	);
-	animation: reverse-barber 400s infinite linear;
+	/*animation: reverse-barber 400s infinite linear;
 	background-size: 226px 226px;
-	background-position-x: 0%;
+	background-position-x: 0%;*/
+	background-size: cover;
 }
 
 .faq a {
@@ -259,9 +261,10 @@ body {
   	var(--bg-dark) 80px,
   	var(--bg-dark) 160px
 	);
-	animation: barber 400s infinite linear;
+	/*animation: barber 400s infinite linear;
 	background-size: 226px 226px;
-	background-position-x: 100%;
+	background-position-x: 100%;*/
+	background-size: cover;
 	/*background: repeating-linear-gradient(
 	  45deg,
 	  #bbb,
