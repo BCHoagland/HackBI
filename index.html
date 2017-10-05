@@ -45,14 +45,14 @@
 					<h1>Schedule</h1>
 					<div class="schedule">
 						<h3>We're currently working on a schedule. We'll put it up here as soon as it's finalized!</h3>
-						<!--<h3><span>Time:</span> Registration</h3>
+						<h3><span>Time:</span> Registration</h3>
 						<h3><span>Time:</span> Guest Speaker</h3>
 						<h3><span>Time:</span> Event</h3>
 						<h3><span>Time:</span> Event</h3>
 						<h3><span>Time:</span> Event</h3>
 						<h3><span>Time:</span> Event</h3>
 						<h3><span>Time:</span> Event</h3>
-						<h3><span>Time:</span> Presentations and Judging</h3>-->
+						<h3><span>Time:</span> Presentations and Judging</h3>
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-6 box hideme">
@@ -68,7 +68,7 @@
 		</div>
 	</div>
 
-	<div class="faq">
+	<div class="faq" style="z-index:1001;position:relative;">
 		<!--<div class="container">-->
 			<div class="row">
 				<div class="col-xs-12 header" id="faqScroll">
@@ -183,13 +183,19 @@
 		</a>
 	</div>
 
+
+	<!--<img src="img/cardinal-vr.svg" alt="cardinal vr? wild" style="width: 25%;transform: translate(280%, -926%) rotate(20deg);position:relative;z-index: 1000;">
+-->
+
+
+
 	<script type="text/javascript">
     function myMap() {
         var mapOptions = {
             center: new google.maps.LatLng(38.809081, -77.080936), zoom: 15, mapTypeId: google.maps.MapTypeId.ROADMAP
         }
         var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-    }
+		}
     	</script>
 	<script src="script.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANzJG2lRUPqaghioGhb47PX4xlxN0Eaho&callback=myMap"></script>
