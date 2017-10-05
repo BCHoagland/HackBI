@@ -290,6 +290,11 @@ body {
 	max-height: 200px;
 	padding: 40px;
 	margin: auto;
+  transition: transform 0.5s;
+}
+
+.sponsors .logos img:hover {
+  transform: translate(-5px, -5px);
 }
 
 /**********REGISTER BAR**********/
