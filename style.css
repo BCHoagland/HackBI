@@ -1,3 +1,42 @@
+@font-face {
+  font-family: Jaapokki;
+  src: url('fonts/Jaapokki-Regular.otf'), url('/fonts/Jaapokki-Regular.otf');
+}
+
+@font-face {
+  font-family: Metrophobic;
+  src: url('fonts/Metrophobic.otf'), url('/fonts/Metrophobic.otf');
+}
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-4rem) scale(.8);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes barber {
+	0% {
+		background-position-x: 0%;
+	}
+	100% {
+		background-position-x: 450%;
+	}
+}
+
+@keyframes reverse-barber {
+	0% {
+		background-position-x: 450%;
+	}
+	100% {
+		background-position-x: 0%;
+	}
+}
+
 :root {
 	/*blue theme*/
 	/*--bg-light: #606dbc;
@@ -63,7 +102,7 @@ body {
 	margin-right: 0;
 }
 
-.main, .faq, #bottom-bar {
+.main, .faq, #register {
 	-webkit-filter: brightness(95%);
 	filter: brightness(95%);
 }
@@ -93,7 +132,7 @@ body {
   	var(--bg-dark) 80px,
   	var(--bg-dark) 160px
 	), url("img/bg.jpg");
-	/*background-image: url("../img/bg.jpg");*/
+	/*background-image: url("img/bg.jpg");*/
 
 	/*animation: barber 400s infinite linear;
 	background-size: 226px 226px;
