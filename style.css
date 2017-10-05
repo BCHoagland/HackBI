@@ -92,12 +92,44 @@ body {
   display: inline;
 }
 
+/**********CARDINALS**********/
+#cardinal-vr {
+  position: absolute;
+  z-index: 9;
+  transform: rotate(20deg);
+  display: none;
+}
+
 /**********PANELS**********/
 
 /*GENERAL*/
 .row {
 	margin-left: 0;
 	margin-right: 0;
+}
+
+.main, .info, .faq, .map, .sponsors {
+  position: relative;
+}
+
+.main {
+  z-index: 0;
+}
+
+.info {
+  z-index: 10;
+}
+
+.faq {
+  z-index: 20;
+}
+
+.map {
+  z-index: 30;
+}
+
+.sponsors {
+  z-index: 40;
 }
 
 .main, .faq, #register {
@@ -188,7 +220,6 @@ body {
 
 .info .items, .info .schedule {
 	text-align: left;
-	background-color: #fff;
 	padding: 20px;
 }
 

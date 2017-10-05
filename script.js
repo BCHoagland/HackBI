@@ -11,6 +11,7 @@ function formatForDesktopOrMobile() {
 	if ($screenWidth >= 768) {
 		fixScheduleAndItemsHeight();
 		setJumbotronHeight(true);
+		updateCardinals();
 	} else {
 		setJumbotronHeight(false);
 	}
@@ -77,6 +78,13 @@ $('#registerLink').click(function() {
 	givenCode.push(4);
 	checkCode();
 });
+
+//update the positions and sizes of the cardinal svgs
+function updateCardinals() {
+	$cardinalVrSide = $(window).width() / 4;	//cardinal images are squares
+	$cardinalVrTop = $('.info').offset().top + $('.info').height() - ($cardinalVrSide * 0.9);
+	$('#cardinal-vr').css({"display": "inherit", "width": $cardinalVrSide, "top": $cardinalVrTop + "px", "right": $cardinalVrSide * 1 / 3});
+}
 
 $(document).ready(function() {
 	formatForDesktopOrMobile();
