@@ -57,18 +57,16 @@ body {
 
 .hideme {
 	opacity:0;
-	-webkit-transition: opacity 1s, top 1s;
-	-moz-transition: opacity 1s, top 1s;
-	-o-transition: opacity 1s, top 1s;
-	transition: opacity 1s, top 1s;
-	position: relative;
-	top: 20px;
+	-webkit-transition: opacity 1s, transform 0.5s;
+	-moz-transition: opacity 1s, transform 0.5s;
+	-o-transition: opacity 1s, transform 0.5s;
+	transition: opacity 1s, transform 0.5s;
+  transform: translateY(20px);
 }
 
 .showme {
 	opacity:1 !important;
-	position: relative;
-	top: 0;
+  transform: translateY(0);
 }
 
 /**********NAVBAR**********/
@@ -235,6 +233,10 @@ body {
 	background-color: transparent;
 	padding: 40px;
 	margin: 40px 0 40px 0;
+}
+
+.faq .qa:hover {
+  transform: translate(-5px, -5px);
 }
 
 .faq .qa h3:first-child {
