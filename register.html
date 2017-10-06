@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HackBI Registration</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+body {
+	font-family: Metrophobic;
+}
+form {
+	font-size: 2rem;
+}
+h1 {
+	color: var(--theme-color);
+	font-size: 4rem;
+}
+#thankyou_message {
+	text-align: center;
+}
+.jumbotron {
+	color: var(--theme-color);
+	font: 4em Jaapokki;
+	background-color: #fff;
+	border-bottom: 1px solid #ddd;
+}
+#days {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+.form-check {
+	text-align: left;
+}
+label, .form-check-label {
+	font-weight: normal;
+}
+.btn {
+	font-size: 2rem;
+	background-color: var(--theme-color);
+}
+    </style>
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron text-center" style="border-radius: 0;">Register for HackBI</div>
+    <h1>Registration is two easy steps:</h1>
+					<h3>Download the following two files, fill them, out and scan them to <a href="mailto:hackbi@bishopireton.org">hackbi@bishopireton.org</a></h3>
+					<h3>Fill out the following form and you're all set!</h3>
+					<a href="files/emergencyCarePermission.doc">
+						<h3 class="make-translucent">Emergency Care Permission Form</h3>
+					</a>
+					<a href="files/parentPermission.pdf">
+						<h3 class="make-translucent">Parent Permission Form</h3>
+					</a>
+	</div>
+	
+	<div class="col-md-2 col-md-offset-5">
+	<form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbwhSgLn7sN0s4x2q7EXihaWpP-hClgDyRw-e9jHz3KkIS0e3-o/exec">
+		<div class="form-group">
+			<label for="name">Name</label>
+			<input name="name" type="text" class="form-control" id="name" placeholder="Name">
+		</div>
+		
+		<input name="email" type="email" placeholder="Email" value="hoaglandb1@bishopireton.org" style="display:none;" required>
+		
+		<div id="days">
+		<div class="form-check">
+			<label class="form-check-label">
+				<input class="form-check-input" name="monday" type="checkbox"> Monday
+			</label>
+		</div>
+		<div class="form-check">
+			<label class="form-check-label">
+				<input class="form-check-input" name="tuesday" type="checkbox"> Tuesday
+			</label>
+		</div>
+		<div class="form-check">
+			<label class="form-check-label">
+				<input class="form-check-input" name="wednesday" type="checkbox"> Wednesday
+			</label>
+		</div>
+		<div class="form-check">
+			<label class="form-check-label">
+				<input class="form-check-input" name="thursday" type="checkbox"> Thursday
+			</label>
+		</div>
+		<div class="form-check">
+			<label class="form-check-label">
+				<input class="form-check-input" name="friday" type="checkbox"> Friday
+			</label>
+		</div>
+		<div class="form-check">
+			<label class="form-check-label">
+				<input class="form-check-input" name="saturday" type="checkbox"> Saturday
+			</label>
+		</div>
+		</div>
+		
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+	</div>
+	
+	<div id="thankyou_message" style="display:none;">
+		<h1>lmao thanks boi</h1>
+	</div>
+	<script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+</body>
+</html>
