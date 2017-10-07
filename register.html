@@ -5,29 +5,41 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<style>
-body {
-	font-family: Metrophobic;
-}
-form {
-	font-size: 2rem;
-}
-h1 {
-	color: var(--theme-color);
-	font-size: 4rem;
-}
 #thankyou_message {
 	text-align: center;
 }
-.jumbotron {
-	color: var(--theme-color);
-	font: 4em Jaapokki;
-	background-color: #fff;
-	border-bottom: 1px solid #ddd;
+.row {
+	color: var(--bg-dark);
 }
-#days {
+.jumbotron {
+	color: #fff;
+	font: 4em Jaapokki;
+	background: repeating-linear-gradient(
+  	45deg,
+  	var(--bg-light),
+  	var(--bg-light) 80px,
+  	var(--bg-dark) 80px,
+  	var(--bg-dark) 160px
+	);
+	background-size: cover;
+}
+#confirmation-info {
+	color: #fff;
+	background: repeating-linear-gradient(
+  	-45deg,
+  	var(--bg-light),
+  	var(--bg-light) 80px,
+  	var(--bg-dark) 80px,
+  	var(--bg-dark) 160px
+	);
+	background-size: cover;
+	padding: 4rem;
+	margin-top: 4rem;
+}
+/*#days {
 	margin-top: 2rem;
 	margin-bottom: 2rem;
-}
+}*/
 .form-check {
 	text-align: left;
 }
@@ -36,72 +48,120 @@ label, .form-check-label {
 }
 .btn {
 	font-size: 2rem;
-	background-color: var(--theme-color);
+	color: #fff;
+	background-color: var(--bg-light);
+	border-color: var(--bg-light);
+}
+.btn:hover {
+	background-color: var(--bg-dark);
+	border-color: var(--bg-dark);
+}
+
+.colWithBorder {
+	border-right: 2px solid var(--complement-color);
 }
     </style>
 </head>
 <body>
-	<div class="container">
-		<div class="jumbotron text-center" style="border-radius: 0;">Register for HackBI</div>
-    <h1>Registration is two easy steps:</h1>
-					<h3>Download the following two files, fill them, out and scan them to <a href="mailto:hackbi@bishopireton.org">hackbi@bishopireton.org</a></h3>
-					<h3>Fill out the following form and you're all set!</h3>
-					<a href="files/emergencyCarePermission.doc">
-						<h3 class="make-translucent">Emergency Care Permission Form</h3>
-					</a>
-					<a href="files/parentPermission.pdf">
-						<h3 class="make-translucent">Parent Permission Form</h3>
-					</a>
+	<div class="jumbotron text-center">Register for HackBI</div>
+
+	<div class="row text-center">
+		<div class="col-sm-12">
+			<h1>There are two steps to register:</h1>
+		</div>
+		<div class="col-sm-6 colWithBorder">
+			<h3>Download the following two files, fill them, out and scan them to <a href="mailto:hackbi@bishopireton.org">hackbi@bishopireton.org</a></h3>
+			<a href="files/emergencyCarePermission.doc">
+				<h3 class="make-translucent">Emergency Care Permission Form</h3>
+			</a>
+			<a href="files/parentPermission.pdf">
+				<h3 class="make-translucent">Parent Permission Form</h3>
+			</a>
+		</div>
+		<div class="col-sm-6">
+			<h3>Fill out the following form and you're all set!</h3>
+		</div>
 	</div>
-	
-	<div class="col-md-2 col-md-offset-5">
-	<form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbwhSgLn7sN0s4x2q7EXihaWpP-hClgDyRw-e9jHz3KkIS0e3-o/exec">
+
+	<div class="col-md-6 col-md-offset-3">
+	<form id="gform" method="POST" action="https://script.google.com/a/bishopireton.org/macros/s/AKfycbySc9-oNaIhd4fehpybN3XEkl1dK_T05FB-ywpuYyeiNMOpTYuc/exec">
 		<div class="form-group">
-			<label for="name">Name</label>
-			<input name="name" type="text" class="form-control" id="name" placeholder="Name">
+			<label for="first-name">First Name</label>
+			<input name="first-name" type="text" class="form-control" placeholder="First Name" required><br/>
+
+			<label for="last-name">Last Name</label>
+			<input name="last-name" type="text" class="form-control" placeholder="Last Name" required><br/>
+
+			<label for="email">Email</label>
+			<input name="email" type="email" class="form-control" placeholder="Email" required><br/>
+
+			<label for="high-school">High School</label>
+			<input name="high-school" type="text" class="form-control" placeholder="High School" required><br/>
+
+			<label for="food-allergies">Please list any food allergies here</label>
+			<input name="food-allergies" type="text" class="form-control" placeholder="Food Alergies">
 		</div>
-		
-		<input name="email" type="email" placeholder="Email" value="hoaglandb1@bishopireton.org" style="display:none;" required>
-		
-		<div id="days">
-		<div class="form-check">
-			<label class="form-check-label">
-				<input class="form-check-input" name="monday" type="checkbox"> Monday
-			</label>
+
+		<div class="form-group">
+			<label for="sel1">Programming Experience</label>
+			<select class="form-control" id="sel1">
+				<option>None</option>
+				<option>1 year</option>
+				<option>2 years</option>
+				<option>3 years</option>
+				<option>4+ years</option>
+			</select>
 		</div>
-		<div class="form-check">
-			<label class="form-check-label">
-				<input class="form-check-input" name="tuesday" type="checkbox"> Tuesday
-			</label>
+
+		<!--<div id="days">
+			<div class="form-check">
+				<label class="form-check-label">
+					<input class="form-check-input" name="first-name" type="checkbox"> Monday
+				</label>
+			</div>
+			<div class="form-check">
+				<label class="form-check-label">
+					<input class="form-check-input" name="tuesday" type="checkbox"> Tuesday
+				</label>
+			</div>
+			<div class="form-check">
+				<label class="form-check-label">
+					<input class="form-check-input" name="wednesday" type="checkbox"> Wednesday
+				</label>
+			</div>
+			<div class="form-check">
+				<label class="form-check-label">
+					<input class="form-check-input" name="thursday" type="checkbox"> Thursday
+				</label>
+			</div>
+			<div class="form-check">
+				<label class="form-check-label">
+					<input class="form-check-input" name="friday" type="checkbox"> Friday
+				</label>
+			</div>
+			<div class="form-check">
+				<label class="form-check-label">
+					<input class="form-check-input" name="saturday" type="checkbox"> Saturday
+				</label>
+			</div>
+		</div>-->
+
+		<div class="form-group text-center">
+			<button type="submit" class="btn btn-primary">Submit</button>
+			<button type="reset" class="btn btn-primary">Reset</button>
 		</div>
-		<div class="form-check">
-			<label class="form-check-label">
-				<input class="form-check-input" name="wednesday" type="checkbox"> Wednesday
-			</label>
-		</div>
-		<div class="form-check">
-			<label class="form-check-label">
-				<input class="form-check-input" name="thursday" type="checkbox"> Thursday
-			</label>
-		</div>
-		<div class="form-check">
-			<label class="form-check-label">
-				<input class="form-check-input" name="friday" type="checkbox"> Friday
-			</label>
-		</div>
-		<div class="form-check">
-			<label class="form-check-label">
-				<input class="form-check-input" name="saturday" type="checkbox"> Saturday
-			</label>
-		</div>
-		</div>
-		
-		<button type="submit" class="btn btn-primary">Submit</button>
 	</form>
 	</div>
-	
+
+</div class="row">
+	<div class="col-sm-12 text-center" id="confirmation-info">
+		<h2>You must complete BOTH steps in order to register for HackBI</h1>
+		<h4>You should receive an email when you submit your information to us. If you do not receive an email within a reasonable amount of time, email us as <a href="mailto:hackbi@bishopireton.org">hackbi@bishopireton.org</a> and we'll make sure you're signed up</h3>
+	</div>
+</div>
+
 	<div id="thankyou_message" style="display:none;">
-		<h1>lmao thanks boi</h1>
+		<h1>Thank you for signing up for HackBI!</h1>
 	</div>
 	<script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
 </body>
