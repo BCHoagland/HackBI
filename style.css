@@ -375,11 +375,11 @@ body {
 	text-decoration: none;
 }
 
-.learn-more .make-translucent:hover {
+.make-translucent:hover {
 	opacity: 0.7;
 }
 
-.learn-more .make-translucent:active {
+.make-translucent:active {
 	opacity: 0.4;
 }
 

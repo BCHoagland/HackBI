@@ -3,14 +3,27 @@
 <head>
 	<title>HackBI Registration</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<style>
+body {
+	font-family: Montserrat, Metrophobic;
+	color: #333;
+}
+
+a, a h3 {
+	color: inherit;
+}
+
 #thankyou_message {
 	text-align: center;
+	margin: 10rem;
+	display: none;
 }
-.row {
-	color: var(--bg-dark);
+#thankyou_message h1 {
+	margin-bottom: 4rem;
 }
+
 .jumbotron {
 	color: #fff;
 	font: 4em Jaapokki;
@@ -23,6 +36,23 @@
 	);
 	background-size: cover;
 }
+
+#steps {
+	margin-bottom: 2rem;
+}
+
+#steps h2 {
+	font-weight: bold;
+}
+
+a:hover, a h3:hover {
+	color: inherit;
+}
+
+#steps .col {
+	padding: 2rem;
+}
+
 #confirmation-info {
 	color: #fff;
 	background: repeating-linear-gradient(
@@ -36,6 +66,16 @@
 	padding: 4rem;
 	margin-top: 4rem;
 }
+
+#confirmation-info h3 {
+	font-weight: bold;
+}
+
+#confirmation-info a {
+	font-size: 2rem;
+	text-decoration: none;
+}
+
 /*#days {
 	margin-top: 2rem;
 	margin-bottom: 2rem;
@@ -63,24 +103,28 @@ label, .form-check-label {
     </style>
 </head>
 <body>
-	<div class="jumbotron text-center">Register for HackBI</div>
+	<div class="jumbotron text-center"><br/>Register for HackBI<br/><br/></div>
 
-	<div class="row text-center">
-		<div class="col-sm-12">
-			<h1>There are two steps to register:</h1>
-		</div>
-		<div class="col-sm-6 colWithBorder">
+	<div class="row text-center" id="steps">
+		<div class="col-sm-6 colWithBorder col">
+			<h2>Step 1:</h2>
 			<h3>Download the following two files, fill them, out and scan them to <a href="mailto:hackbi@bishopireton.org">hackbi@bishopireton.org</a></h3>
 			<a href="files/emergencyCarePermission.doc">
-				<h3 class="make-translucent">Emergency Care Permission Form</h3>
+				<h3>Emergency Care Permission Form</h3>
 			</a>
 			<a href="files/parentPermission.pdf">
-				<h3 class="make-translucent">Parent Permission Form</h3>
+				<h3>Parent Permission Form</h3>
 			</a>
 		</div>
-		<div class="col-sm-6">
+		<div class="col-sm-6 col">
+			<h2>Step 2:</h2>
 			<h3>Fill out the following form and you're all set!</h3>
 		</div>
+	</div>
+
+	<div id="thankyou_message">
+		<h1>Thank you for signing up for HackBI!</h1>
+		<h4>You should receive an email when you submit your information to us. If you do not receive an email within a reasonable amount of time, email us as <a href="mailto:hackbi@bishopireton.org">hackbi@bishopireton.org</a> and we'll make sure you're signed up</h3>
 	</div>
 
 	<div class="col-md-6 col-md-offset-3">
@@ -104,7 +148,7 @@ label, .form-check-label {
 
 		<div class="form-group">
 			<label for="sel1">Programming Experience</label>
-			<select class="form-control" id="sel1">
+			<select class="form-control" name="programming-experience">
 				<option>None</option>
 				<option>1 year</option>
 				<option>2 years</option>
@@ -155,14 +199,11 @@ label, .form-check-label {
 
 </div class="row">
 	<div class="col-sm-12 text-center" id="confirmation-info">
-		<h2>You must complete BOTH steps in order to register for HackBI</h1>
-		<h4>You should receive an email when you submit your information to us. If you do not receive an email within a reasonable amount of time, email us as <a href="mailto:hackbi@bishopireton.org">hackbi@bishopireton.org</a> and we'll make sure you're signed up</h3>
+		<h3>Done here?</h3>
+		<a href="index.html" class="make-translucent">Click here to head back to the main HackBI page</a><br/><br/>
 	</div>
 </div>
 
-	<div id="thankyou_message" style="display:none;">
-		<h1>Thank you for signing up for HackBI!</h1>
-	</div>
 	<script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
 </body>
 </html>
