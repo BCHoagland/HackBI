@@ -3,6 +3,8 @@
 <head>
 	<title>HackBI Registration</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<style>
@@ -86,6 +88,11 @@ a:hover, a h3:hover {
 label, .form-check-label {
 	font-weight: normal;
 }
+
+.checkbox {
+	margin: 3rem 0 3rem 0;
+}
+
 .btn {
 	font-size: 2rem;
 	color: #fff;
@@ -99,6 +106,14 @@ label, .form-check-label {
 
 .colWithBorder {
 	border-right: 2px solid var(--complement-color);
+}
+
+.form-group {
+	margin: 0;
+}
+
+.programming-experience {
+	margin-top: 2rem;
 }
     </style>
 </head>
@@ -127,27 +142,32 @@ label, .form-check-label {
 		<h4>You should receive an email when you submit your information to us. If you do not receive an email within a reasonable amount of time, email us as <a href="mailto:hackbi@bishopireton.org">hackbi@bishopireton.org</a> and we'll make sure you're signed up</h3>
 	</div>
 
-	<div class="col-md-6 col-md-offset-3">
-	<form id="gform" method="POST" action="https://script.google.com/a/bishopireton.org/macros/s/AKfycbySc9-oNaIhd4fehpybN3XEkl1dK_T05FB-ywpuYyeiNMOpTYuc/exec">
+	<div class="col-sm-6 col-sm-offset-3">
+	<form id="registrationForm" method="POST" action="https://script.google.com/a/bishopireton.org/macros/s/AKfycbySc9-oNaIhd4fehpybN3XEkl1dK_T05FB-ywpuYyeiNMOpTYuc/exec">
 		<div class="form-group">
-			<label for="first-name">First Name</label>
+			<label for="first-name">First Name*</label>
 			<input name="first-name" type="text" class="form-control" placeholder="First Name" required><br/>
-
-			<label for="last-name">Last Name</label>
+			<label for="last-name">Last Name*</label>
 			<input name="last-name" type="text" class="form-control" placeholder="Last Name" required><br/>
+		</div>
 
-			<label for="email">Email</label>
+		<div class="form-group">
+			<label for="email">Email*</label>
 			<input name="email" type="email" class="form-control" placeholder="Email" required><br/>
+		</div>
 
+		<div class="form-group">
 			<label for="high-school">High School</label>
-			<input name="high-school" type="text" class="form-control" placeholder="High School" required><br/>
+			<input name="high-school" type="text" class="form-control" placeholder="High School"><br/>
+		</div>
 
+		<div class="form-group">
 			<label for="food-allergies">Please list any food allergies here</label>
 			<input name="food-allergies" type="text" class="form-control" placeholder="Food Alergies">
 		</div>
 
-		<div class="form-group">
-			<label for="sel1">Programming Experience</label>
+		<div class="form-group programming-experience">
+			<label for="programming-experience">Programming Experience</label>
 			<select class="form-control" name="programming-experience">
 				<option>None</option>
 				<option>1 year</option>
@@ -155,6 +175,15 @@ label, .form-check-label {
 				<option>3 years</option>
 				<option>4+ years</option>
 			</select>
+		</div>
+
+		<div class="form-check">
+			<div class="col-sm-6 col-sm-offset-3">
+				<div class="checkbox">
+					<input type="checkbox" name="notice" id="noticeCheckbox" required>
+					<label for="noticeCheckbox">I agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy. Please note that you may receive pre and post-event informational e-mails and occasional messages about hackathons from MLH as per the MLH Privacy Policy.</label>
+				</div>
+			</div>
 		</div>
 
 		<!--<div id="days">
@@ -191,11 +220,13 @@ label, .form-check-label {
 		</div>-->
 
 		<div class="form-group text-center">
-			<button type="submit" class="btn btn-primary">Submit</button>
-			<button type="reset" class="btn btn-primary">Reset</button>
+			<div class="col-sm-6 col-sm-offset-3">
+				<button type="submit" class="btn btn-primary">Submit</button>
+				<button type="reset" class="btn btn-primary">Reset</button>
+			</div>
 		</div>
 	</form>
-	</div>
+</div>
 
 </div class="row">
 	<div class="col-sm-12 text-center" id="confirmation-info">
