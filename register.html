@@ -112,11 +112,11 @@ label, .form-check-label {
 	margin: 0;
 }
 
-.high-school {
+.grade, .high-school {
 	margin-bottom: 2rem;
 }
 
-.programming-experience {
+.programming-experience, .t-shirt-size {
 	margin-top: 2rem;
 }
     </style>
@@ -160,14 +160,21 @@ label, .form-check-label {
 			<input name="email" type="email" class="form-control" placeholder="Email" required><br/>
 		</div>
 
-		<!--<div class="form-group">
-			<label for="high-school">High School</label>
-			<input name="high-school" type="text" class="form-control" placeholder="High School"><br/>
-		</div>-->
+		<div class="form-group grade">
+			<label for="grade">Grade</label>
+			<select class="form-control" name="grade" id="grade">
+				<option disabled selected value></option>
+				<option>9</option>
+				<option>10</option>
+				<option>11</option>
+				<option>12</option>
+			</select>
+		</div>
 
 		<div class="form-group high-school">
 			<label for="high-school">High School</label>
 			<select class="form-control" name="high-school" id="high-school">
+				<option disabled selected value></option>
 				<option>None</option>
 				<option>Academy of the Holy Cross</option>
 				<option>Archbishop Carroll High School</option>
@@ -285,11 +292,25 @@ label, .form-check-label {
 		<div class="form-group programming-experience">
 			<label for="programming-experience">Programming Experience</label>
 			<select class="form-control" name="programming-experience" id="programming-experience">
+				<option disabled selected value></option>
 				<option>None</option>
 				<option>1 year</option>
 				<option>2 years</option>
 				<option>3 years</option>
 				<option>4+ years</option>
+			</select>
+		</div>
+
+		<div class="form-group t-shirt-size">
+			<label for="t-shirt-size">T-shirt Size*</label>
+			<select class="form-control" name="t-shirt-size" id="t-shirt-size" required>
+				<option disabled selected value></option>
+				<option>YL</option>
+				<option>S</option>
+				<option>M</option>
+				<option>L</option>
+				<option>XL</option>
+				<option>XL</option>
 			</select>
 		</div>
 
