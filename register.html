@@ -112,11 +112,11 @@ label, .form-check-label {
 	margin: 0;
 }
 
-.high-school {
+.grade, .high-school {
 	margin-bottom: 2rem;
 }
 
-.programming-experience {
+.programming-experience, .t-shirt-size {
 	margin-top: 2rem;
 }
     </style>
@@ -161,120 +161,127 @@ label, .form-check-label {
 			<input name="email" type="email" class="form-control" placeholder="Email" oninvalid="this.setCustomValidity('We need your email to update you about HackBI')" oninput="setCustomValidity('')" required><br/>
 		</div>
 
-		<!--<div class="form-group">
-			<label for="high-school">High School</label>
-			<input name="high-school" type="text" class="form-control" placeholder="High School"><br/>
-		</div>-->
+		<div class="form-group grade">
+			<label for="grade">Grade</label>
+			<select class="form-control" name="grade" id="grade">
+				<option disabled selected value></option>
+				<option>9</option>
+				<option>10</option>
+				<option>11</option>
+				<option>12</option>
+			</select>
+		</div>
 
 		<div class="form-group high-school">
 			<label for="high-school">High School</label>
 			<select class="form-control" name="high-school" id="high-school">
-				Archbishop Carroll High School
-Elizabeth Seton High School
-Academy of the Holy Cross
-Our Lady of Good Counsel
-St John's College High School
-DeMatha Catholic High School
-Gonzaga College High School
-Bishop McNamara High School
-St Mary's Ryken High School
-Paul VI Catholic High School
-Bishop Denis J. O'Connell High School
-
-The Potomac School
-Flint Hill School
-St John Paul the Great High School
-St Stephens & St Agnes School
-Randolph Macon Academy
-Wakefield School
-St Catherine's School
-St Gertrude's High School
-Benedictine High School
-St Christopher's School
-Collegiate School
-Trinity Episcopal School
-Bishop Sullivan
-Norfolk Academy
-Norfolk Christian Academy
-Fredericksburg Christian Academy
-St Michael's School
-Highland School
-Episcopal
-Trinity Christian School
-Oakcrest School
-Madeira School
-Blue Ridge School
-Fishburne Military School
-King Abdullah Academy
-Peninsula Catholic High School
-St Anne's Bellfield School
-The Miller School of Albemarle
-Woodberry Forest School
-Maret School
-Sidwell Friends School
-St Albans School for Boys
-Landon School
-Georgetown Day School
-Georgetown Preparatory School for Boys
-St James School
-Bullis School
-Georgetown Visitation School
-Washington International School
-Riverdale Baptist School
-National Christian Academy
-Stone Ridge School of the Sacred Heart
-National Cathedral School
-Concordia Preparatory School
-Connelly School of the Holy Child
-Maryland School for the Deaf
-Model Secondary School for the Deaf
-Glenelg Country Day School
-School without Walls
-St Anselm's Abbey School
-St Mary's of Annapolis
-The Heights School
-St Andrew's Episcopal
-St Paul's School for Girls
-Severn School
-Yorktown HS
-WT Woodson
-West Potomac
-TC Williams
-Woodrow Wilson
-Eleanor Roosevelt
-Leonardtown
-Woodbridge
-Walter Johnson
-Bethesda, Chevy Chase
-Thomas Jefferson
-Westfield
-Oakton
-Chantilly
-Westfield
-Broad Run
-Stone Bridge
-Stonewall Jackson
-JEB Stuart
-Springbrook
-Sherando
-Robinson
-West Springfield
-Lake Braddock
-Paint Branch
-Patriot
-Mount Vernon
-James Madison
-Kettle Run
-Langley
-Dominion/Potomac Falls
-Hayfield
-Thomas Edison
-Colonial Forge
-Chopticon
-Centreville
-Brentsville
-Caesar Chavez Public Charter School
-Ballou
+				<option disabled selected value></option>
+				<option>None</option>
+				<option>Academy of the Holy Cross</option>
+				<option>Archbishop Carroll High School</option>
+				<option>Ballou</option>
+				<option>Benedictine High School</option>
+				<option>Bethesda, Chevy Chase</option>
+				<option>Bishop Denis J. O'Connell High School</option>
+				<option>Bishop McNamara High School</option>
+				<option>Bishop Sullivan</option>
+				<option>Blue Ridge School</option>
+				<option>Brentsville</option>
+				<option>Broad Run</option>
+				<option>Bullis School</option>
+				<option>Caesar Chavez Public Charter School</option>
+				<option>Centreville</option>
+				<option>Chantilly</option>
+				<option>Chopticon</option>
+				<option>Collegiate School</option>
+				<option>Colonial Forge</option>
+				<option>Concordia Preparatory School</option>
+				<option>Connelly School of the Holy Child</option>
+				<option>DeMatha Catholic High School</option>
+				<option>Dominion/Potomac Falls</option>
+				<option>Eleanor Roosevelt</option>
+				<option>Elizabeth Seton High School</option>
+				<option>Episcopal</option>
+				<option>Fishburne Military School</option>
+				<option>Flint Hill School</option>
+				<option>Fredericksburg Christian Academy</option>
+				<option>Georgetown Day School</option>
+				<option>Georgetown Preparatory School for Boys</option>
+				<option>Georgetown Visitation School</option>
+				<option>Glenelg Country Day School</option>
+				<option>Gonzaga College High School</option>
+				<option>Hayfield</option>
+				<option>Highland School</option>
+				<option>JEB Stuart</option>
+				<option>James Madison</option>
+				<option>Kettle Run</option>
+				<option>King Abdullah Academy</option>
+				<option>Lake Braddock</option>
+				<option>Landon School</option>
+				<option>Langley</option>
+				<option>Leonardtown</option>
+				<option>Madeira School</option>
+				<option>Maret School</option>
+				<option>Maryland School for the Deaf</option>
+				<option>Model Secondary School for the Deaf</option>
+				<option>Mount Vernon</option>
+				<option>National Cathedral School</option>
+				<option>National Christian Academy</option>
+				<option>Norfolk Academy</option>
+				<option>Norfolk Christian Academy</option>
+				<option>Oakcrest School</option>
+				<option>Oakton</option>
+				<option>Our Lady of Good Counsel</option>
+				<option>Paint Branch</option>
+				<option>Patriot</option>
+				<option>Paul VI Catholic High School</option>
+				<option>Peninsula Catholic High School</option>
+				<option>Randolph Macon Academy</option>
+				<option>Riverdale Baptist School</option>
+				<option>Robinson</option>
+				<option>School without Walls</option>
+				<option>Severn School</option>
+				<option>Sherando</option>
+				<option>Sidwell Friends School</option>
+				<option>Springbrook</option>
+				<option>St Albans School for Boys</option>
+				<option>St Andrew's Episcopal</option>
+				<option>St Anne's Bellfield School</option>
+				<option>St Anselm's Abbey School</option>
+				<option>St Catherine's School</option>
+				<option>St Christopher's School</option>
+				<option>St Gertrude's High School</option>
+				<option>St James School</option>
+				<option>St John Paul the Great High School</option>
+				<option>St John's College High School</option>
+				<option>St Mary's Ryken High School</option>
+				<option>St Mary's of Annapolis</option>
+				<option>St Michael's School</option>
+				<option>St Paul's School for Girls</option>
+				<option>St Stephens &amp; St Agnes School</option>
+				<option>Stone Bridge</option>
+				<option>Stone Ridge School of the Sacred Heart</option>
+				<option>Stonewall Jackson</option>
+				<option>TC Williams</option>
+				<option>The Heights School</option>
+				<option>The Miller School of Albemarle</option>
+				<option>The Potomac School</option>
+				<option>Thomas Edison</option>
+				<option>Thomas Jefferson</option>
+				<option>Trinity Christian School</option>
+				<option>Trinity Episcopal School</option>
+				<option>WT Woodson</option>
+				<option>Wakefield School</option>
+				<option>Walter Johnson</option>
+				<option>Washington International School</option>
+				<option>West Potomac</option>
+				<option>West Springfield</option>
+				<option>Westfield</option>
+				<option>Westfield</option>
+				<option>Woodberry Forest School</option>
+				<option>Woodbridge</option>
+				<option>Woodrow Wilson</option>
+				<option>Yorktown HS</option>
 			</select>
 		</div>
 
@@ -286,11 +293,25 @@ Ballou
 		<div class="form-group programming-experience">
 			<label for="programming-experience">Programming Experience</label>
 			<select class="form-control" name="programming-experience" id="programming-experience">
+				<option disabled selected value></option>
 				<option>None</option>
 				<option>1 year</option>
 				<option>2 years</option>
 				<option>3 years</option>
 				<option>4+ years</option>
+			</select>
+		</div>
+
+		<div class="form-group t-shirt-size">
+			<label for="t-shirt-size">T-shirt Size*</label>
+			<select class="form-control" name="t-shirt-size" id="t-shirt-size" required>
+				<option disabled selected value></option>
+				<option>YL</option>
+				<option>S</option>
+				<option>M</option>
+				<option>L</option>
+				<option>XL</option>
+				<option>XL</option>
 			</select>
 		</div>
 
