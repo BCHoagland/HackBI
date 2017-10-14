@@ -133,11 +133,6 @@ body {
   z-index: 40;
 }
 
-.main, .faq, #register {
-	-webkit-filter: brightness(95%);
-	filter: brightness(95%);
-}
-
 .main .row, .info .row, .faq .row, .sponsors .row, .map .row {
 	/*font-family: Consolas, 'Andale Mono', Helvetica, sans-serif;*/
 	font-family: Montserrat, Metrophobic;
