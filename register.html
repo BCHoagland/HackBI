@@ -194,8 +194,7 @@ label, .form-check-label {
 			<input name="email" type="email" class="form-control" placeholder="Email" oninvalid="this.setCustomValidity('We need your email to update you about HackBI')" oninput="setCustomValidity('')" required><br/>
 		</div>
 
-		<div class="schools-group">
-
+		<div class="schools-group text-center">
 			<div class="btn-group select-buttons" data-toggle="buttons">
 				<label class="btn btn-secondary" id="middle-school-option">
 					<input type="radio" autocomplete="off">Middle School
@@ -370,7 +369,7 @@ label, .form-check-label {
 		</div>
 
 		<div class="form-check">
-			<div class="col-sm-6 offset-sm-3">
+			<div class="col-sm-8 offset-sm-2">
 				<div class="checkbox">
 					<label class="custom-control custom-checkbox">
 						<input type="checkbox" class="custom-control-input" required>
@@ -505,7 +504,7 @@ function setGrades(options) {
 
 $(document).ready(function() {
 	$('#middle-school-option').click(function() {
-		var newOptions = {"6": "6", "7": "7", "8": "8"};
+		var newOptions = {"8": "8"};
 		setGrades(newOptions);
 		$('.grade').css('display', 'inherit');
 		$('.middle-school').css('display', 'inherit');
