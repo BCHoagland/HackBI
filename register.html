@@ -453,6 +453,7 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
 		$('#thankyou_message > h1').text("go away sean");
 		$('#thankyou_message > h4').text("no hard feelings?");
 		document.getElementById('thankyou_message').style.display = 'block';
+		return false;
 	}
 
   if( !validEmail(data.email) ) {   // if email is not valid show error
