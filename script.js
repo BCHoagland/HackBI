@@ -11,10 +11,10 @@ function formatForDesktopOrMobile() {
 	if ($screenWidth >= 768) {
 		fixScheduleAndItemsHeight();
 		setJumbotronHeight(true);
-		updateCardinals(true);
+		// updateCardinals(true);
 	} else {
 		fixScheduleAndItemsHeight();
-		updateCardinals(false);
+		// updateCardinals(false);
 	}
 }
 
@@ -81,15 +81,15 @@ $('#registerLink').click(function() {
 });
 
 //update the positions and sizes of the cardinal svgs
-function updateCardinals(show) {
-	if (show) {
-		$cardinalVrSide = $(window).width() / 4;	//cardinal images are squares
-		$cardinalVrTop = $('.info').offset().top + $('.info').height() - ($cardinalVrSide * 0.9);
-		$('#cardinal-vr').css({"display": "inherit", "width": $cardinalVrSide, "top": $cardinalVrTop + "px", "right": $cardinalVrSide * 1 / 3});
-	} else {
-		$('#cardinal-vr').css("display", "none");
-	}
-}
+// function updateCardinals(show) {
+// 	if (show) {
+// 		$cardinalVrSide = $(window).width() / 4;	//cardinal images are squares
+// 		$cardinalVrTop = $('.info').offset().top + $('.info').height() - ($cardinalVrSide * 0.9);
+// 		$('#cardinal-vr').css({"display": "inherit", "width": $cardinalVrSide, "top": $cardinalVrTop + "px", "right": $cardinalVrSide * 1 / 3});
+// 	} else {
+// 		$('#cardinal-vr').css("display", "none");
+// 	}
+// }
 
 $(document).ready(function() {
 	formatForDesktopOrMobile();
