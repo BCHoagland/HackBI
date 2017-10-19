@@ -183,10 +183,10 @@ label, .form-check-label {
 	<form id="gform" method="POST" action="https://script.google.com/a/bishopireton.org/macros/s/AKfycbySc9-oNaIhd4fehpybN3XEkl1dK_T05FB-ywpuYyeiNMOpTYuc/exec">
 		<div class="form-group">
 			<label for="first-name">First Name*</label>
-			<input name="first-name" type="text" class="form-control" placeholder="First Name" oninvalid="this.setCustomValidity('We need to know your name')" oninput="setCustomValidity('')" required><br/>
+			<input id="first-name" name="first-name" type="text" class="form-control" placeholder="First Name" oninvalid="this.setCustomValidity('We need to know your name')" oninput="setCustomValidity('')" required><br/>
 
 			<label for="last-name">Last Name*</label>
-			<input name="last-name" type="text" class="form-control" placeholder="Last Name" oninvalid="this.setCustomValidity('We need to know your name')" oninput="setCustomValidity('')" required><br/>
+			<input id="last-name" name="last-name" type="text" class="form-control" placeholder="Last Name" oninvalid="this.setCustomValidity('We need to know your name')" oninput="setCustomValidity('')" required><br/>
 		</div>
 
 		<div class="form-group">
@@ -444,11 +444,16 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
   event.preventDefault();           // we are submitting via xhr below
   var data = getFormData();         // get the values submitted in the form
 
-  /* OPTION: Remove this comment to enable SPAM prevention, see README.md
-  if (validateHuman(data.honeypot)) {  //if form is filled, form will not be submitted
-    return false;
-  }
-  */
+	var firstNameTest = $('#first-name').val();
+	var lastNameTest = $('#last-name').val();
+	var totalNameTest = (firstNameTest + lastNameTest).toLowerCase();
+	if (totalNameTest.indexOf("jeff") >= 0 && totalNameTest.indexOf("dunham") >= 0) {
+		document.getElementById('submission-controls').style.display = 'none';
+		document.getElementById('gform').style.display = 'none'; // hide form
+		$('#thankyou_message > h1').text("go away sean");
+		$('#thankyou_message > h4').text("no hard feelings?");
+		document.getElementById('thankyou_message').style.display = 'block';
+	}
 
   if( !validEmail(data.email) ) {   // if email is not valid show error
     document.getElementById('email-invalid').style.display = 'block';
