@@ -443,8 +443,13 @@ function sanitizeSeanInput(str) {
 	var newStr = str;
 	str = str.replace("@", "a");
 	str = str.replace("3", "e");
-	str = str.replace("4", "a");
+	str = str.replace("4", "f");
 	str = str.replace("v", "u");
+	str = str.replace("|_|", "u");
+	str = str.replace("|-|", "h");
+	str = str.replace("|\\/|", "m");
+	str = str.replace("v", "u");
+	str = str.replace("0", "d");
 	return str;
 }
 
@@ -457,7 +462,7 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
 
 	var lastNameTest = sanitizeSeanInput($('#last-name').val());
 	var totalNameTest = (firstNameTest + lastNameTest).toLowerCase();
-	if (totalNameTest.indexOf("jef") >= 0 && totalNameTest.indexOf("dunham") >= 0) {
+	if (totalNameTest.indexOf("je") >= 0 && totalNameTest.indexOf("dunham") >= 0) {
 		document.getElementById('submission-controls').style.display = 'none';
 		document.getElementById('gform').style.display = 'none'; // hide form
 		$('#thankyou_message > h1').text("go away sean");
