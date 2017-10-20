@@ -452,6 +452,9 @@ function sanitizeSeanInput(str) {
 	str = str.replace("|\\/|", "m");
 	str = str.replace("v", "u");
 	str = str.replace("0", "d");
+	str = str.replace("/-\\", "a");
+	str = str.replace("o_", "e");
+	str = str.replace("/^\\", "a");
 	return str;
 }
 
