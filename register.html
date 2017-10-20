@@ -439,14 +439,25 @@ function getFormData() {
   return data;
 }
 
+function sanitizeSeanInput(str) {
+	var newStr = str;
+	str = str.replace("@", "a");
+	str = str.replace("3", "e");
+	str = str.replace("4", "a");
+	str = str.replace("v", "u");
+	return str;
+}
+
 function handleFormSubmit(event) {  // handles form submit withtout any jquery
   event.preventDefault();           // we are submitting via xhr below
   var data = getFormData();         // get the values submitted in the form
 
-	var firstNameTest = $('#first-name').val();
-	var lastNameTest = $('#last-name').val();
+	//prevent sean from joining
+	var firstNameTest = sanitizeSeanInput($('#first-name').val());
+
+	var firstNameTest = sanitizeSeanInput($('#last-name').val());
 	var totalNameTest = (firstNameTest + lastNameTest).toLowerCase();
-	if (totalNameTest.indexOf("jeff") >= 0 && totalNameTest.indexOf("dunham") >= 0) {
+	if (totalNameTest.indexOf("jef") >= 0 && totalNameTest.indexOf("dunham") >= 0) {
 		document.getElementById('submission-controls').style.display = 'none';
 		document.getElementById('gform').style.display = 'none'; // hide form
 		$('#thankyou_message > h1').text("go away sean");
