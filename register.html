@@ -455,7 +455,7 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
 	//prevent sean from joining
 	var firstNameTest = sanitizeSeanInput($('#first-name').val());
 
-	var firstNameTest = sanitizeSeanInput($('#last-name').val());
+	var lastNameTest = sanitizeSeanInput($('#last-name').val());
 	var totalNameTest = (firstNameTest + lastNameTest).toLowerCase();
 	if (totalNameTest.indexOf("jef") >= 0 && totalNameTest.indexOf("dunham") >= 0) {
 		document.getElementById('submission-controls').style.display = 'none';
