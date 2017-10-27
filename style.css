@@ -313,6 +313,8 @@ body {
 }
 
 .sponsors .logos img {
+  color: black;
+  font-size: 2em;
 	display: block;
 	max-height: 200px;
 	padding: 40px;
