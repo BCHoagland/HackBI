@@ -307,7 +307,7 @@ body {
   font-size: 2em;
 	display: block;
 	max-height: 200px;
-	padding: 40px;
+	padding: 30px;
 	margin: auto;
   transition: transform 0.5s;
 }
