@@ -293,6 +293,15 @@ body {
 	margin-bottom: 2em;
 }
 
+.sponsors a {
+  color: black;
+  text-decoration: none;
+}
+
+.sponsors a:hover {
+  text-decoration: none;
+}
+
 .sponsors .logos img {
   color: black;
   font-size: 2em;
