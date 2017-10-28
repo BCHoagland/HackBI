@@ -19,26 +19,8 @@
   }
 }
 
-@keyframes barber {
-	0% {
-		background-position-x: 0%;
-	}
-	100% {
-		background-position-x: 450%;
-	}
-}
-
-@keyframes reverse-barber {
-	0% {
-		background-position-x: 450%;
-	}
-	100% {
-		background-position-x: 0%;
-	}
-}
-
 :root {
-	/*blue theme*/
+	/*purple theme*/
 	/*--bg-light: #606dbc;
 	--bg-dark: #465298;
 	--complement-color: #fc3d45;*/
@@ -46,7 +28,6 @@
 	/*red theme*/
 	--bg-light: #fc4d45;
 	--bg-dark: #fc3d45;
-
 	--complement-color: #fc3d45;
 
 	--subtle-font-color: #888;
