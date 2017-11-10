@@ -3,7 +3,7 @@ var startcol;
 
 function setup() {
 	createCanvas(screen.width, screen.height);
-	background(255);
+	background(20);
 	noFill();
 	noiseSeed(random(100));
 	startcol = random(255);
@@ -17,8 +17,8 @@ function draw() {
 		var angle = map(i, 0, np, 0, TWO_PI);
 		var cx = frameCount * 2 - 200;
 		var cy = height / 2 + 50 * (sin(frameCount / 50) / 2);
-		var xx = 100 * cos(angle + cx / 10);
-		var yy = 100 * sin(angle + cx / 10);
+		var xx = 150 * cos(angle + cx / 10);
+		var yy = 200 * sin(angle + cx / 10);
 		var v = createVector(xx, yy);
 		xx = (xx + cx) / 150; yy = (yy + cy) / 150;
 		v.mult(1 + 1.5 * noise(xx, yy));
