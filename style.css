@@ -19,13 +19,6 @@
   }
 }
 
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100000000;
-}
-
 :root {
 	/*purple theme*/
 	/*--bg-light: #606dbc;
