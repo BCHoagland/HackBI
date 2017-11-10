@@ -2,11 +2,12 @@ var np = 300;
 var startcol;
 
 function setup() {
-	createCanvas(screen.width, screen.height);
+	createCanvas(window.innerWidth, window.innerHeight);
 	background(20);
 	noFill();
 	noiseSeed(random(100));
-	startcol = random(255);
+	// startcol = random(255);
+	startcol = 40.45003697769573;
 }
 
 function draw() {

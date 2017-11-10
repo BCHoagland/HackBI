@@ -35,7 +35,7 @@ canvas {
 	/*red theme*/
 	--bg-light: #fc4d45;
 	--bg-dark: #fc3d45;
-	--complement-color: #fc3d45;
+	--complement-color: rgb(180, 180, 180);
 
 	--subtle-font-color: #888;
 }
@@ -222,13 +222,14 @@ body {
 	color: #fff;
 	text-align: center;
 	margin-right: 0;
-	background: repeating-linear-gradient(
+	/*background: repeating-linear-gradient(
 		-45deg,
   	var(--bg-light),
   	var(--bg-light) 80px,
   	var(--bg-dark)80px,
   	var(--bg-dark) 160px
-	);
+	);*/
+  background-color: rgb(20, 20, 20);
 	/*animation: reverse-barber 400s infinite linear;
 	background-size: 226px 226px;
 	background-position-x: 0%;*/
@@ -333,13 +334,14 @@ body {
 }
 
 #register {
-	background: repeating-linear-gradient(
+	/*background: repeating-linear-gradient(
 		45deg,
   	var(--bg-light),
   	var(--bg-light) 80px,
   	var(--bg-dark) 80px,
   	var(--bg-dark) 160px
-	);
+	);*/
+  background-color: rgb(20, 20, 20);
 	/*animation: barber 400s infinite linear;
 	background-size: 226px 226px;
 	background-position-x: 100%;*/
@@ -356,7 +358,7 @@ body {
 }
 
 #register .row:first-child .box {
-	border-bottom: 2px solid #fff;
+	border-bottom: 2px solid var(--complement-color);
 	padding-bottom: 2em;
 	margin-bottom: 2em;
 }
