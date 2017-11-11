@@ -1,20 +1,8 @@
-//makes .schedule and .items same height
-function fixScheduleAndItemsHeight() {
-	$heightToSet = Math.max($('.schedule').outerHeight(), $('.items').outerHeight());
-	$('.schedule').css('height', $heightToSet);
-	$('.items').css('height', $heightToSet);
-}
-
 //sets proper formatting for jumbotron and info panels based on device
 function formatForDesktopOrMobile() {
 	$screenWidth = $(window).width();
 	if ($screenWidth >= 768) {
-		fixScheduleAndItemsHeight();
 		setJumbotronHeight(true);
-		// updateCardinals(true);
-	} else {
-		fixScheduleAndItemsHeight();
-		// updateCardinals(false);
 	}
 }
 
@@ -90,17 +78,6 @@ $('#registerLink').click(function() {
 	checkCode();
 });
 
-//update the positions and sizes of the cardinal svgs
-// function updateCardinals(show) {
-// 	if (show) {
-// 		$cardinalVrSide = $(window).width() / 4;	//cardinal images are squares
-// 		$cardinalVrTop = $('.info').offset().top + $('.info').height() - ($cardinalVrSide * 0.9);
-// 		$('#cardinal-vr').css({"display": "inherit", "width": $cardinalVrSide, "top": $cardinalVrTop + "px", "right": $cardinalVrSide * 1 / 3});
-// 	} else {
-// 		$('#cardinal-vr').css("display", "none");
-// 	}
-// }
-
 $(document).ready(function() {
 	formatForDesktopOrMobile();
 	updateHideShow();
@@ -111,6 +88,7 @@ $(document).ready(function() {
 	});
 	$(window).resize(function () {
 		formatForDesktopOrMobile();
+		$('canvas').css({'width': $(window).width(), 'height': $(window).height()});
 	});
 
 	//smooth scrolling for anchor links

@@ -19,13 +19,6 @@
   }
 }
 
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -100;
-}
-
 :root {
 	/*purple theme*/
 	/*--bg-light: #606dbc;
@@ -85,14 +78,6 @@ body {
   display: inline;
 }
 
-/**********CARDINALS**********/
-#cardinal-vr {
-  position: absolute;
-  z-index: 9;
-  transform: rotate(20deg);
-  display: none;
-}
-
 /**********PANELS**********/
 
 /*GENERAL*/
@@ -142,21 +127,15 @@ body {
 }
 
 /*MAIN*/
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
+
 .main {
   background: transparent;
-	/*background: repeating-linear-gradient(
-  	45deg,
-  	var(--bg-light),
-  	var(--bg-light) 80px,
-  	var(--bg-dark) 80px,
-  	var(--bg-dark) 160px
-	);*/
-
-	/*background-image: url("img/bg.jpg");*/
-
-	/*animation: barber 400s infinite linear;
-	background-size: 226px 226px;
-	background-position-x: 0%;*/
 	background-size: cover;
 	text-align: center;
 }
@@ -175,10 +154,6 @@ body {
 	animation-delay: 0.2s;
 }
 
-/*.info-text {
-	animation-delay: 0.6s;
-}*/
-
 .register-text {
 	animation-delay: 0.6s;
 }
@@ -195,7 +170,7 @@ body {
 
 .main a div {
   color: rgb(20, 20, 20);
-  font-size: 2em;
+  font-size: 3rem;
   background: white;
   display: inline-block;
   padding: 1em;
@@ -306,7 +281,6 @@ body {
 	height: 40vmin;
 	margin: auto;
 	margin-top: 40px;
-	margin-bottom: 40px;
 }
 
 .map h4 {
@@ -341,7 +315,7 @@ body {
   font-size: 2em;
 	display: block;
 	max-height: 200px;
-	padding: 30px;
+	padding: 40px;
 	margin: auto;
   transition: transform 0.5s;
 }
