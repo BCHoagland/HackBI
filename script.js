@@ -29,6 +29,16 @@ function updateHideShow() {
 	});
 }
 
+//check to see if nav bar's background should be added/removed
+function updateNavBar() {
+	var bottom_of_nav = $(window).scrollTop() + $('.nav').height();
+	if (bottom_of_nav > $(window).height()) {
+		$('.nav').css('background', 'rgba(20, 20, 20, 0.9)');
+	} else if (bottom_of_nav < $(window).height()) {
+		$('.nav').css('background', 'transparent');
+	}
+}
+
 //set the jumbotron height to fill the screen
 //vertically center logo text if user is on dekstop
 function setJumbotronHeight(desktop) {
@@ -97,6 +107,7 @@ $(document).ready(function() {
 
 	$(window).scroll(function() {
 		updateHideShow();
+		updateNavBar();
 	});
 	$(window).resize(function () {
 		formatForDesktopOrMobile();
