@@ -412,7 +412,7 @@ body {
 
 #bottom-bar {
 	font-size: 1.6rem;
-	background-color: #fff;
+	background-color: #eee;
   padding: 0;
 }
 
@@ -464,11 +464,6 @@ body {
 		font-size: 7rem;
 	}
 
-	.info .box:first-child {
-		border-right-width: 0;
-		border-bottom: 2px solid var(--complement-color);
-	}
-
 	.map #map {
 		height: 80vmin;
 	}
@@ -496,11 +491,6 @@ body {
 		padding-bottom: 10em;
 	}
 
-	.info .box:first-child {
-		border-right: 2px solid var(--complement-color);
-		border-bottom-width: 0;
-	}
-
 	.map #map {
 		height: 80vmin;
 	}
@@ -522,18 +512,6 @@ body {
 
 	.main .row {
 		padding-bottom: 10em;
-	}
-
- 	.info .box:first-child h1 {
-    border-left: 1px solid var(--complement-color);
-		border-right: 1px solid var(--complement-color);
-		border-bottom-width: 0;
-	}
-
-  .info .box:first-child {
-    border-left: 1px solid var(--complement-color);
-		border-right: 1px solid var(--complement-color);
-		border-bottom-width: 0;
 	}
 
 	.map #map {
