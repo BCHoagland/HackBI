@@ -63,6 +63,12 @@ body {
 	-o-transition: background 0.4s;
 	transition: background 0.4s;
 }
+
+.nav ul {
+  position: relative;
+  left: 10rem;
+}
+
 .nav a {
   color: #fff;
   font: 1.4rem Montserrat;
