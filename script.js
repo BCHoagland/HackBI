@@ -21,7 +21,7 @@ function updateHideShow() {
 function updateNavBar() {
 	var bottom_of_nav = $(window).scrollTop() + $('.nav').height();
 	if (bottom_of_nav > $(window).height()) {
-		$('.nav').css('background', 'rgba(20, 20, 20, 0.9)');
+		$('.nav').css('background', 'rgba(20, 20, 24, 0.9)');
 	} else if (bottom_of_nav < $(window).height()) {
 		$('.nav').css('background', 'transparent');
 	}

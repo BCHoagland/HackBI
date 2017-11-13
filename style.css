@@ -34,6 +34,7 @@
 }
 
 body {
+  background: rgb(20, 20, 24);
 	min-width: 440px;
 }
 
@@ -54,7 +55,6 @@ body {
 /**********NAVBAR**********/
 .nav {
 	position: fixed;
-	/*background: rgba(255, 255, 255, 0.2);*/
 	width: 100%;
 	height: 4.4em;
 	z-index: 10000;
@@ -175,7 +175,7 @@ canvas {
 }
 
 .main a div {
-  color: rgb(20, 20, 20);
+  color: rgb(20, 20, 24);
   font-size: 3rem;
   background: white;
   display: inline-block;
@@ -190,7 +190,9 @@ canvas {
 
 /*INFO*/
 .info {
+  color: white;
 	text-align: center;
+  background: rgb(20, 20, 24);
 }
 
 .info h1 {
@@ -222,20 +224,11 @@ canvas {
 
 /*FAQ*/
 .faq {
-	color: #fff;
+	/*color: #fff;*/
+  color: rgb(20, 20, 24);
 	text-align: center;
 	margin-right: 0;
-	/*background: repeating-linear-gradient(
-		-45deg,
-  	var(--bg-light),
-  	var(--bg-light) 80px,
-  	var(--bg-dark)80px,
-  	var(--bg-dark) 160px
-	);*/
-  background-color: rgb(20, 20, 20);
-	/*animation: reverse-barber 400s infinite linear;
-	background-size: 226px 226px;
-	background-position-x: 0%;*/
+  background-color: white;
 	background-size: cover;
 }
 
@@ -244,13 +237,13 @@ canvas {
 }
 
 .faq a {
-	color: #fff;
+	/*color: #fff;*/
+  color: rgb(20, 20, 24);
 	font-weight: bold;
 }
 
 .faq .qa {
 	text-align: left;
-	/*background-color: #fff;*/
 	background-color: transparent;
 	padding: 40px;
 	margin: 40px 0 40px 0;
@@ -262,7 +255,7 @@ canvas {
 
 .faq .qa h3:first-child {
 	/*color: var(--theme-color);*/
-	color: #fff;
+	color: rgb(20, 20, 24);
 	font-size: 1.6em;
 	font-weight: bold;
 	padding-bottom: 15px;
@@ -299,9 +292,9 @@ canvas {
 
 /*SPONSORS*/
 .sponsors {
+  color: white;
 	text-align: center;
-	/*background-color: var(--panel-color);*/
-	background-color: white;
+	background-color: rgb(20, 20, 24);
 }
 
 .sponsors .row {
@@ -317,18 +310,18 @@ canvas {
 }
 
 .sponsors .logos img {
-  color: black;
+  color: white;
   font-size: 2em;
 	display: block;
-	max-height: 200px;
-	padding: 40px;
+	/*max-height: 200px;*/
+	padding: 2rem;
 	margin: auto;
   transition: transform 0.5s;
 }
 
-.sponsors .logos img:hover {
+/*.sponsors .logos img:hover {
   transform: translate(-5px, -5px);
-}
+}*/
 
 /**********REGISTER BAR**********/
 .learn-more {
@@ -346,7 +339,7 @@ canvas {
   	var(--bg-dark) 80px,
   	var(--bg-dark) 160px
 	);*/
-  background-color: rgb(20, 20, 20);
+  background-color: rgb(20, 20, 24);
 	/*animation: barber 400s infinite linear;
 	background-size: 226px 226px;
 	background-position-x: 100%;*/
