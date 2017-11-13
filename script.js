@@ -81,6 +81,8 @@ $('#registerLink').click(function() {
 $(document).ready(function() {
 	formatForDesktopOrMobile();
 	updateHideShow();
+	updateNavBar();
+	$('canvas').css({'width': $(window).width(), 'height': $(window).height()});
 
 	$(window).scroll(function() {
 		updateHideShow();

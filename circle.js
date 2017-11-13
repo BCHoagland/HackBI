@@ -16,7 +16,7 @@ function draw() {
 	var sx, sy;
 	for(var i = 0; i < np; i++) {
 		var angle = map(i, 0, np, 0, TWO_PI);
-		var cx = frameCount * 2 - 200;
+		var cx = frameCount * 2 - 300;
 		var cy = height / 2 + 50 * (sin(frameCount / 50) / 2);
 		var xx = 150 * cos(angle + cx / 10);
 		var yy = 200 * sin(angle + cx / 10);
