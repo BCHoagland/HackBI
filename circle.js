@@ -2,8 +2,8 @@ var np = 300;
 var startcol;
 
 function setup() {
-	createCanvas(window.innerWidth, window.innerHeight);
-	background(20);
+	createCanvas(document.body.clientWidth, window.innerHeight);
+	background(20, 20, 24);
 	noFill();
 	noiseSeed(random(100));
 	// startcol = random(255);
