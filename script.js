@@ -42,7 +42,7 @@ function setJumbotronHeight(desktop) {
 }
 
 //<3 easter eggs
-var code = [1, 2, 3, 4, 2, 4, 1, 2];
+var code = [1, 2, 3, 2, 1, 2, 3, 2];
 var givenCode = [];
 
 function checkCode() {
@@ -69,12 +69,8 @@ $('#faqLink').click(function() {
 	givenCode.push(2);
 	checkCode();
 });
-$('#mapLink').click(function() {
-	givenCode.push(3);
-	checkCode();
-});
 $('#registerLink').click(function() {
-	givenCode.push(4);
+	givenCode.push(3);
 	checkCode();
 });
 
