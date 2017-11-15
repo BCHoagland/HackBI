@@ -1,20 +1,8 @@
-//makes .schedule and .items same height
-function fixScheduleAndItemsHeight() {
-	$heightToSet = Math.max($('.schedule').outerHeight(), $('.items').outerHeight());
-	$('.schedule').css('height', $heightToSet);
-	$('.items').css('height', $heightToSet);
-}
-
 //sets proper formatting for jumbotron and info panels based on device
 function formatForDesktopOrMobile() {
 	$screenWidth = $(window).width();
 	if ($screenWidth >= 768) {
-		fixScheduleAndItemsHeight();
 		setJumbotronHeight(true);
-		// updateCardinals(true);
-	} else {
-		fixScheduleAndItemsHeight();
-		// updateCardinals(false);
 	}
 }
 
@@ -29,6 +17,16 @@ function updateHideShow() {
 	});
 }
 
+//check to see if nav bar's background should be added/removed
+function updateNavBar() {
+	var bottom_of_nav = $(window).scrollTop() + $('.nav').height();
+	if (bottom_of_nav > $(window).height()) {
+		$('.nav').css('background', 'rgba(20, 20, 24, 0.9)');
+	} else if (bottom_of_nav < $(window).height()) {
+		$('.nav').css('background', 'transparent');
+	}
+}
+
 //set the jumbotron height to fill the screen
 //vertically center logo text if user is on dekstop
 function setJumbotronHeight(desktop) {
@@ -36,7 +34,7 @@ function setJumbotronHeight(desktop) {
 	$('.main').css('height', $screenHeight + "px");
 
 	$mainTextHeight = $('#main-text').height();
-	$topMargin = (($screenHeight - ($mainTextHeight * 1.5)) / 2);
+	$topMargin = (($screenHeight - ($mainTextHeight * 1.75)) / 2);
 
 	if (desktop) {
 		$('#main-text').css('margin-top', $topMargin + "px");
@@ -44,7 +42,7 @@ function setJumbotronHeight(desktop) {
 }
 
 //<3 easter eggs
-var code = [1, 2, 3, 4, 2, 4, 1, 2];
+var code = [1, 2, 3, 2, 1, 2, 3, 2];
 var givenCode = [];
 
 function checkCode() {
@@ -71,34 +69,24 @@ $('#faqLink').click(function() {
 	givenCode.push(2);
 	checkCode();
 });
-$('#mapLink').click(function() {
+$('#registerLink').click(function() {
 	givenCode.push(3);
 	checkCode();
 });
-$('#registerLink').click(function() {
-	givenCode.push(4);
-	checkCode();
-});
-
-//update the positions and sizes of the cardinal svgs
-// function updateCardinals(show) {
-// 	if (show) {
-// 		$cardinalVrSide = $(window).width() / 4;	//cardinal images are squares
-// 		$cardinalVrTop = $('.info').offset().top + $('.info').height() - ($cardinalVrSide * 0.9);
-// 		$('#cardinal-vr').css({"display": "inherit", "width": $cardinalVrSide, "top": $cardinalVrTop + "px", "right": $cardinalVrSide * 1 / 3});
-// 	} else {
-// 		$('#cardinal-vr').css("display", "none");
-// 	}
-// }
 
 $(document).ready(function() {
 	formatForDesktopOrMobile();
 	updateHideShow();
+	updateNavBar();
+	$('canvas').css({'width': $(window).width(), 'height': $(window).height() * 2});
+
 	$(window).scroll(function() {
 		updateHideShow();
+		updateNavBar();
 	});
 	$(window).resize(function () {
 		formatForDesktopOrMobile();
+		$('canvas').css({'width': $(window).width(), 'height': $(window).height()});
 	});
 
 	//smooth scrolling for anchor links
