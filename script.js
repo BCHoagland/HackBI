@@ -78,7 +78,7 @@ $(document).ready(function() {
 	formatForDesktopOrMobile();
 	updateHideShow();
 	updateNavBar();
-	$('canvas').css({'width': $(window).width(), 'height': $(window).height() * 2});
+	$('canvas').css({'width': $(window).width(), 'height': $(window).height() * 1.5});
 
 	$(window).scroll(function() {
 		updateHideShow();
@@ -86,7 +86,7 @@ $(document).ready(function() {
 	});
 	$(window).resize(function () {
 		formatForDesktopOrMobile();
-		$('canvas').css({'width': $(window).width(), 'height': $(window).height()});
+		$('canvas').css({'width': $(window).width(), 'height': $(window).height() * 1.5});
 	});
 
 	//smooth scrolling for anchor links
