@@ -82,7 +82,7 @@ $(document).ready(function() {
 	formatForDesktopOrMobile();
 	updateHideShow();
 	updateNavBar();
-	$('canvas').css({'width': $(window).width(), 'height': $(window).height()});
+	$('canvas').css({'width': $(window).width(), 'height': $(window).height() * 2});
 
 	$(window).scroll(function() {
 		updateHideShow();

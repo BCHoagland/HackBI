@@ -192,7 +192,8 @@ canvas {
 .info {
   color: white;
 	text-align: center;
-  background: rgb(20, 20, 24);
+  /*background: rgb(20, 20, 24);*/
+  background: transparent;
 }
 
 .info h1 {

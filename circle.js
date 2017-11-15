@@ -2,7 +2,7 @@ var np = 300;
 var startcol;
 
 function setup() {
-	createCanvas(document.body.clientWidth, window.innerHeight);
+	createCanvas(document.body.clientWidth, window.innerHeight * 1.5);
 	background(20, 20, 24);
 	noFill();
 	noiseSeed(random(100));
@@ -17,7 +17,7 @@ function draw() {
 	for(var i = 0; i < np; i++) {
 		var angle = map(i, 0, np, 0, TWO_PI);
 		var cx = frameCount * 2 - 300;
-		var cy = height / 2 + 50 * (sin(frameCount / 50) / 2);
+		var cy = (height / 1.5) / 2 + 50 * (sin(frameCount / 50) / 2);
 		var xx = 150 * cos(angle + cx / 10);
 		var yy = 200 * sin(angle + cx / 10);
 		var v = createVector(xx, yy);
