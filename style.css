@@ -28,12 +28,13 @@
 	/*red theme*/
 	--bg-light: #fc4d45;
 	--bg-dark: #fc3d45;
-	--complement-color: #fc3d45;
+	--complement-color: rgb(180, 180, 180);
 
 	--subtle-font-color: #888;
 }
 
 body {
+  background: rgb(20, 20, 24);
 	min-width: 440px;
 }
 
@@ -54,16 +55,25 @@ body {
 /**********NAVBAR**********/
 .nav {
 	position: fixed;
-	background: #fff;
 	width: 100%;
 	height: 4.4em;
 	z-index: 10000;
+  -webkit-transition: background 0.4s;
+	-moz-transition: background 0.4s;
+	-o-transition: background 0.4s;
+	transition: background 0.4s;
 }
+
+.nav ul {
+  position: relative;
+  left: 10rem;
+}
+
 .nav a {
-  color: var(--complement-color);
+  color: #fff;
   font: 1.4rem Montserrat;
   text-transform: uppercase;
-	padding-right: 1em;
+	padding-right: 2em;
 }
 
 .nav a:hover {
@@ -72,14 +82,6 @@ body {
 
 .nav li {
   display: inline;
-}
-
-/**********CARDINALS**********/
-#cardinal-vr {
-  position: absolute;
-  z-index: 9;
-  transform: rotate(20deg);
-  display: none;
 }
 
 /**********PANELS**********/
@@ -131,19 +133,15 @@ body {
 }
 
 /*MAIN*/
-.main {
-	background: repeating-linear-gradient(
-  	45deg,
-  	var(--bg-light),
-  	var(--bg-light) 80px,
-  	var(--bg-dark) 80px,
-  	var(--bg-dark) 160px
-	), url("img/bg.jpg");
-	/*background-image: url("img/bg.jpg");*/
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
 
-	/*animation: barber 400s infinite linear;
-	background-size: 226px 226px;
-	background-position-x: 0%;*/
+.main {
+  background: transparent;
 	background-size: cover;
 	text-align: center;
 }
@@ -162,7 +160,7 @@ body {
 	animation-delay: 0.2s;
 }
 
-.info-text {
+.register-text {
 	animation-delay: 0.6s;
 }
 
@@ -176,9 +174,26 @@ body {
 	overflow: hidden;
 }
 
+.main a div {
+  color: rgb(20, 20, 24);
+  font-size: 3rem;
+  background: white;
+  display: inline-block;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.main a:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
 /*INFO*/
 .info {
+  color: white;
 	text-align: center;
+  /*background: rgb(20, 20, 24);*/
+  background: transparent;
 }
 
 .info h1 {
@@ -210,19 +225,11 @@ body {
 
 /*FAQ*/
 .faq {
-	color: #fff;
+	/*color: #fff;*/
+  color: rgb(20, 20, 24);
 	text-align: center;
 	margin-right: 0;
-	background: repeating-linear-gradient(
-		-45deg,
-  	var(--bg-light),
-  	var(--bg-light) 80px,
-  	var(--bg-dark)80px,
-  	var(--bg-dark) 160px
-	);
-	/*animation: reverse-barber 400s infinite linear;
-	background-size: 226px 226px;
-	background-position-x: 0%;*/
+  background-color: white;
 	background-size: cover;
 }
 
@@ -231,13 +238,13 @@ body {
 }
 
 .faq a {
-	color: #fff;
+	/*color: #fff;*/
+  color: rgb(20, 20, 24);
 	font-weight: bold;
 }
 
 .faq .qa {
 	text-align: left;
-	/*background-color: #fff;*/
 	background-color: transparent;
 	padding: 40px;
 	margin: 40px 0 40px 0;
@@ -249,11 +256,14 @@ body {
 
 .faq .qa h3:first-child {
 	/*color: var(--theme-color);*/
-	color: #fff;
+	color: rgb(20, 20, 24);
 	font-size: 1.6em;
 	font-weight: bold;
 	padding-bottom: 15px;
 	margin-top: 0;
+  background: -webkit-linear-gradient(-45deg, #f00, #06f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .faq .qa h3:last-child {
@@ -261,9 +271,9 @@ body {
 }
 
 /*MAP*/
-.map .address {
-	text-align: center;
-}
+/*.map .address {
+  text-align: center;
+}*/
 
 .map #map {
 	color: #888;
@@ -271,7 +281,6 @@ body {
 	height: 40vmin;
 	margin: auto;
 	margin-top: 40px;
-	margin-bottom: 40px;
 }
 
 .map h4 {
@@ -284,9 +293,9 @@ body {
 
 /*SPONSORS*/
 .sponsors {
+  color: white;
 	text-align: center;
-	/*background-color: var(--panel-color);*/
-	background-color: white;
+	background-color: rgb(20, 20, 24);
 }
 
 .sponsors .row {
@@ -302,18 +311,28 @@ body {
 }
 
 .sponsors .logos img {
-  color: black;
+  color: white;
   font-size: 2em;
 	display: block;
-	max-height: 200px;
-	padding: 30px;
+	/*max-height: 200px;*/
+	padding: 2rem;
 	margin: auto;
   transition: transform 0.5s;
 }
 
-.sponsors .logos img:hover {
+/*.sponsors .logos img:hover {
   transform: translate(-5px, -5px);
-}
+}*/
+
+
+
+
+/*YOU CAN PROBABLY REMOVE THE REGISTER BAR STUFF CAUSE THAT'S NOT A THING ANYMORE*/
+
+
+
+
+
 
 /**********REGISTER BAR**********/
 .learn-more {
@@ -324,36 +343,28 @@ body {
 }
 
 #register {
-	background: repeating-linear-gradient(
-		45deg,
-  	var(--bg-light),
-  	var(--bg-light) 80px,
-  	var(--bg-dark) 80px,
-  	var(--bg-dark) 160px
-	);
+  background-color: rgb(20, 20, 20);
 	/*animation: barber 400s infinite linear;
 	background-size: 226px 226px;
 	background-position-x: 100%;*/
 	background-size: cover;
-	/*background: repeating-linear-gradient(
-	  45deg,
-	  #bbb,
-	  #bbb 160px,
-	  #999 160px,
-	  #999 320px
-	);*/
 	padding-top: 40px;
 	padding-bottom: 60px;
+  margin-top: 10rem;
 }
 
-#register .row:first-child .box {
-	border-bottom: 2px solid #fff;
+/*#register .row:first-child .box {
+	border-bottom: 2px solid var(--complement-color);
 	padding-bottom: 2em;
 	margin-bottom: 2em;
-}
+}*/
 
 .learn-more h1 {
+  font-size: 4rem;
 	font-weight: bold;
+  background: -webkit-linear-gradient(-45deg, #f00, #06f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .learn-more a, .learn-more h1, .learn-more h3 {
@@ -371,7 +382,8 @@ body {
 
 #bottom-bar {
 	font-size: 1.6rem;
-	background-color: #fff;
+	background-color: #eee;
+  padding: 0;
 }
 
 #bottom-bar a {
@@ -379,13 +391,14 @@ body {
 }
 
 .fa {
-    padding: 20px 20px 0 20px;
+    padding: 0 20px 0 20px;
     font-size: 30px;
     width: 50px;
     text-align: center;
     text-decoration: none;
     position: relative;
     left: -10px;
+    margin-bottom: 4rem;
 }
 
 .fa:hover {
@@ -421,11 +434,6 @@ body {
 		font-size: 7rem;
 	}
 
-	.info .box:first-child {
-		border-right-width: 0;
-		border-bottom: 2px solid var(--complement-color);
-	}
-
 	.map #map {
 		height: 80vmin;
 	}
@@ -453,11 +461,6 @@ body {
 		padding-bottom: 10em;
 	}
 
-	.info .box:first-child {
-		border-right: 2px solid var(--complement-color);
-		border-bottom-width: 0;
-	}
-
 	.map #map {
 		height: 80vmin;
 	}
@@ -479,11 +482,6 @@ body {
 
 	.main .row {
 		padding-bottom: 10em;
-	}
-
- 	.info .box:first-child {
-		border-right: 2px solid var(--complement-color);
-		border-bottom-width: 0;
 	}
 
 	.map #map {

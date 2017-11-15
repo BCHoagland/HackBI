@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -213,3 +214,254 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANzJG2lRUPqaghioGhb47PX4xlxN0Eaho&callback=myMap"></script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="keywords" content="HackBI, Hack BI, Hack, Bishop Ireton, Ireton, BI">
+	<meta name="description" content="Official Website of the 2018 Bishop Ireton HackBI Hackathon">
+	<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=0.7, minimum-scale=0.7">
+	<link rel="icon" href="img/icon.PNG">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="p5.min.js"></script>
+	<script src="circle.js"></script>
+	<title>HackBI 2018</title>
+</head>
+<body>
+	<div class="nav">
+		<!--<div class="container">-->
+			<br/>
+			<ul class="pull-left">
+				<li><a id="scheduleLink" href="#scheduleScroll">Schedule</a></li>
+				<li><a id="faqLink" href="#faqScroll">FAQ</a></li>
+				<!--<li><a id="mapLink" href="#mapScroll">Map</a></li>-->
+				<li><a id="registerLink" href="#main">Register</a></li>	<!--if you move the register button, this will have to change-->
+			</ul>
+		<!--</div>-->
+	</div>
+
+	<a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/na-2018/events?utm_source=na-2018&utm_medium=TrustBadge&utm_campaign=na-2018&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2018/white.svg" alt="Major League Hacking 2017 Hackathon Season" style="width:100%"></a>
+
+	<div class="jumbotron main" id="main">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-12 logo-text pop-in" id="main-text">
+					<h1>HACK BI</h1>
+					<br/><br/><br/><br/>
+					<a href="register"><div class="register-text pop-in" id="registerScroll">Register</div></a>
+					<!--<br/><br/>
+					<h2 class="info-text pop-in">Bishop Ireton High School</h2>
+					<h2 class="info-text pop-in">January 20 - 21, 2018</h2>-->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="info">
+		<div class="container">
+			<div class="row">
+				<!--<div class="col-xs-12 col-sm-12 box hideme"  id="scheduleScroll">
+					<h1>Schedule</h1>
+					<div class="schedule">
+						<h1>Saturday</h1>
+						<h3><span>8:00 - 9:00 AM:</span> Check In</h3>
+						<h3><span>9:00 - 10:30 AM:</span> Opening Ceremony</h3>
+						<h3><span>10:30 AM - Noon:</span> Beginner Workshop Sessions</h3>
+						<h3><span>12:30 - 1:30 PM:</span> Lunch</h3>
+						<h3><span>1:30 - 4:30 PM:</span> Project Development Block 1</h3>
+						<h3><span>4:30 - 5:30 PM:</span> Advanced Workshop Session 1</h3>
+						<h3><span>5:45 - 6:30 PM:</span> Stop Hacking and Start Stacking!</h3>
+						<h3><span>6:30 - 7:30 PM:</span> Dinner</h3>
+						<h3><span>6:30 - 10:00 PM:</span> Project Development Block 2</h3>
+						<h3><span>10:00 PM - Midnight:</span> Advanced Workshop Session 2</h3>
+						<br/>
+						<h1>Sunday</h1>
+						<h3><span>Midnight:</span> Midnight Snack</h3>
+						<h3><span>12:30 - 6:00 AM:</span> Quiet Hacking Time</h3>
+						<h3><span>7:30 AM:</span> Hacking Ends</h3>
+						<h3><span>8:00 - 9:00 AM:</span> Judging and Awards</h3>
+					</div>
+				</div>-->
+				<div class="col-sm-12"  id="scheduleScroll">
+					<h1>Schedule</h1>
+				</div>
+				<div class="col-sm-6 box"  id="scheduleScroll">
+					<div class="schedule" style="text-align:right;">
+						<h1>Saturday, January 20</h1>
+						<h3><span>8:00 - 9:00 AM:</span></h3>
+						<h3><span>9:00 - 10:30 AM:</span></h3>
+						<h3><span>10:30 AM - Noon:</span></h3>
+						<h3><span>12:30 - 1:30 PM:</span></h3>
+						<h3><span>1:30 - 4:30 PM:</span></h3>
+						<h3><span>4:30 - 5:30 PM:</span></h3>
+						<h3><span>5:45 - 6:30 PM:</span></h3>
+						<h3><span>6:30 - 7:30 PM:</span></h3>
+						<h3><span>7:30 - 10:00 PM:</span></h3>
+						<h3><span>10:00 PM - Midnight:</span></h3>
+						<br/>
+						<h1>Sunday, January 21</h1>
+						<h3><span>Midnight:</span></h3>
+						<h3><span>12:30 - 6:00 AM:</span></h3>
+						<h3><span>7:30 AM:</span></h3>
+						<h3><span>8:00 - 9:00 AM:</span></h3>
+					</div>
+				</div>
+				<div class="col-sm-6 box"  id="scheduleScroll">
+					<div class="schedule">
+						<h1><br/></h1>
+						<h3>Check In</h3>
+						<h3>Opening Ceremony</h3>
+						<h3>Beginner Workshop Sessions</h3>
+						<h3>Lunch</h3>
+						<h3>Project Development Block 1</h3>
+						<h3>Advanced Workshop Session 1</h3>
+						<h3>Stop Hacking and Start Stacking!</h3>
+						<h3>Dinner</h3>
+						<h3>Project Development Block 2</h3>
+						<h3>Advanced Workshop Session 2</h3>
+						<br/>
+						<h1><br/></h1>
+						<h3>Midnight Snack</h3>
+						<h3>Quiet Hacking Time</h3>
+						<h3>Hacking Ends</h3>
+						<h3> Judging and Awards</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="faq">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 header" id="faqScroll">
+					<h1>Frequently Asked Questions</h1>
+					<h3>Don't see your question here? Email us at <a href="mailto:hackbi@bishopireton.org">HackBI@bishopireton.org</a> to ask it!</h3>
+				</div>
+				<div class="col-sm-6 col-xs-12">
+					<div class="qa hideme">
+						<h3>What is a hackathon?</h3>
+						<h3>Hackathons are competitive programming events in which teams and individuals create their own custom projects to showcase.</h3>
+					</div>
+					<div class="qa hideme">
+						<h3>What is HackBI?</h3>
+						<h3>HackBI is a student-run hackathon at Bishop Ireton High School, where you will have 24 hours to learn how to code and/or work with your friends to make your idea come to life!</h3>
+					</div>
+					<div class="qa hideme">
+						<h3>Why should I attend HackBI?</h3>
+						<h3>Whether you're just getting started with coding or have been doing it for a few years, HackBI will be a great place to better your skills and have a lot of fun doing it! HackBI is focused on programming education, so we'll do our best to make sure you don't feel intimidated or overwhelmed by what's going on.</h3>
+					</div>
+					<div class="qa hideme">
+						<h3>Do I need any programming experience to come?</h3>
+						<h3>HackBI is open to any 8th grade or high school students interested, regardless of previous programming experience. We'll have workshops throughout the event to introduce you to new things too.</h3>
+					</div>
+					<div class="qa hideme">
+						<h3>What should I bring?</h3>
+						<h3>You'll need a laptop, phone, chargers, and something to sleep with (or just a lot of caffeine).</h3>
+					</div>
+				</div>
+				<div class="col-sm-6 col-xs-12">
+					<div class="qa hideme">
+						<h3>How much does HackBI cost?</h3>
+						<h3>HackBI will be completely free!</h3>
+					</div>
+					<div class="qa hideme">
+						<h3>What about food?</h3>
+						<h3>We'll handle the food for the event, so no need to bring any money for meals.</h3>
+					</div>
+					<div class="qa hideme">
+						<h3>What if I have dietary concerns?</h3>
+						<h3>If you have a specific dietary concern, please email us to let us know and we'll gladly accomodate you.</h3>
+					</div>
+					<div class="qa hideme">
+						<h3>Do I need to come with a team?</h3>
+						<h3>You can come with a pre-determined team if you want, but if you're coming individually there will be an opportunity before hacking begins to join one.</h3>
+					</div>
+					<div class="qa hideme">
+						<h3>Are there prizes?</h3>
+						<h3>Of course! There will be prizes for each individual in team (a max of 4 people).</h3>
+					</div>
+					<div class="qa hideme">
+						<h3>What if I don't have a laptop?</h3>
+						<h3>Bishop Ireton has a limited number of computers that you can use if you don't have access to your own, so you can still work on a project.</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--<div class="map">
+		<div class="container" id="map-container">
+			<div class="row">
+				<div class="col-sm-4"></div>
+				<div class="col-sm-4 address" id="mapScroll">
+					<h1>Bishop Ireton High School</h1>
+					<h3>201 Cambridge Rd</h3>
+					<h3>Alexandria, VA 22314</h3>
+				</div>
+				<div class="col-sm-12">
+					<div id="map">
+						<h4>rip there was supposed to be a map here</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>-->
+
+	<div class="sponsors">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 header">
+					<h1>Special thanks to all of HackBI's sponsors:</h1>
+					<a href="files/sponsor-perks.pdf"><h1 class="make-translucent">Interested in being a sponsor? Find out more here!</h1></a><br/>
+				</div>
+				<div class="col-sm-4 logos">
+					<a href="https://mlh.io"><img class="img-responsive hideme" src="img/mlh-white.png" alt="MLH"/></a><br/><br/>
+				</div>
+				<div class="col-sm-4 logos">
+					<a href="https://github.com"><img class="img-responsive hideme" src="img/github-white.png" alt="GitHub"/></a><br/>
+				</div>
+				<div class="col-sm-4 logos">
+					<a href="https://www.bishopireton.org/page/Alumni--Parents/PTO"><img class="img-responsive hideme" src="img/bi-logo.jpg" alt="Bishop Ireton High School PTO"/></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--<div class="learn-more" id="register">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3"></div>
+				<div class="col-sm-6 box" id="registerScroll">
+					<a href="register">
+						<h1 class="make-translucent">Register</h1>
+						<h3 class="make-translucent">Click here to register for HackBI!</h3>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>-->
+
+	<div class="learn-more" id="bottom-bar">
+			<br/><br/><p><a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct</a></p><br/>
+			<a href="https://www.facebook.com/HackBIOfficial/" class="fa fa-facebook make-translucent"></a>
+			<a href="https://www.twitter.com/HackBIOfficial" class="fa fa-twitter make-translucent"></a>
+	</div>
+
+	<!--<script type="text/javascript">
+	function myMap() {
+        var mapOptions = {
+            center: new google.maps.LatLng(38.809081, -77.080936), zoom: 15, mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+		}
+	</script>-->
+	<script src="script.js"></script>
+	<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANzJG2lRUPqaghioGhb47PX4xlxN0Eaho&callback=myMap"></script>-->
+</body>
+</html>
+>>>>>>> 068f606601a834af3aa58eea0412aaa8645022ca
