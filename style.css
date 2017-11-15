@@ -225,17 +225,7 @@ canvas {
 	color: #fff;
 	text-align: center;
 	margin-right: 0;
-	/*background: repeating-linear-gradient(
-		-45deg,
-  	var(--bg-light),
-  	var(--bg-light) 80px,
-  	var(--bg-dark)80px,
-  	var(--bg-dark) 160px
-	);*/
   background-color: rgb(20, 20, 20);
-	/*animation: reverse-barber 400s infinite linear;
-	background-size: 226px 226px;
-	background-position-x: 0%;*/
 	background-size: cover;
 }
 
@@ -330,6 +320,16 @@ canvas {
   transform: translate(-5px, -5px);
 }
 
+
+
+
+/*YOU CAN PROBABLY REMOVE THE REGISTER BAR STUFF CAUSE THAT'S NOT A THING ANYMORE*/
+
+
+
+
+
+
 /**********REGISTER BAR**********/
 .learn-more {
 	/*font-family: Consolas, 'Andale Mono', Helvetica, sans-serif;*/
@@ -339,25 +339,11 @@ canvas {
 }
 
 #register {
-	/*background: repeating-linear-gradient(
-		45deg,
-  	var(--bg-light),
-  	var(--bg-light) 80px,
-  	var(--bg-dark) 80px,
-  	var(--bg-dark) 160px
-	);*/
   background-color: rgb(20, 20, 20);
 	/*animation: barber 400s infinite linear;
 	background-size: 226px 226px;
 	background-position-x: 100%;*/
 	background-size: cover;
-	/*background: repeating-linear-gradient(
-	  45deg,
-	  #bbb,
-	  #bbb 160px,
-	  #999 160px,
-	  #999 320px
-	);*/
 	padding-top: 40px;
 	padding-bottom: 60px;
   margin-top: 10rem;
