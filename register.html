@@ -10,8 +10,7 @@
 	<style>
 body {
 	font-family: Montserrat, Metrophobic;
-	color: rgb(20, 20, 24);
-	background: #fff;
+	color: #333;
 }
 
 a, a h3 {
@@ -29,29 +28,16 @@ a, a h3 {
 
 .jumbotron {
 	color: #fff;
-	background: rgb(20, 20, 24);
+	font: 4em Jaapokki;
+	background: repeating-linear-gradient(
+  	45deg,
+  	var(--bg-light),
+  	var(--bg-light) 80px,
+  	var(--bg-dark) 80px,
+  	var(--bg-dark) 160px
+	);
+	background-size: cover;
 	border-radius: 0;
-}
-
-.jumbotron h1 {
-	font: 6em Jaapokki;
-	background: -webkit-linear-gradient(-45deg, #f00, #06f);
-	-webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.jumbotron a div {
-  /*color: rgb(20, 20, 20);*/
-  font-size: 2em;
-  /*background: white;*/
-  display: inline-block;
-  padding: 1em;
-  border-radius: 5px;
-}
-
-.jumbotron a:hover {
-  text-decoration: none;
-  opacity: 0.8;
 }
 
 #steps {
@@ -78,6 +64,29 @@ a:hover {
 	padding: 2rem;
 }
 
+#confirmation-info {
+	color: #fff;
+	background: repeating-linear-gradient(
+  	-45deg,
+  	var(--bg-light),
+  	var(--bg-light) 80px,
+  	var(--bg-dark) 80px,
+  	var(--bg-dark) 160px
+	);
+	background-size: cover;
+	padding: 4rem;
+	margin-top: 4rem;
+}
+
+#confirmation-info h3 {
+	font-weight: bold;
+}
+
+#confirmation-info a {
+	font-size: 1.4rem;
+	text-decoration: none;
+}
+
 .form-check {
 	text-align: left;
 }
@@ -93,21 +102,17 @@ label, .form-check-label {
 	font-family: Montserrat;
 	font-size: 2rem;
 	color: #fff;
-	/*background-color: #823994;
-	border-color: #823994;*/
-	background-color: #d72D6F;
-	border-color: #d72D6F;
-	margin-bottom: 4rem;
+	background-color: var(--bg-light);
+	border-color: var(--bg-light);
 }
-
 .btn:hover {
-	background-color: #6546AE;
-	border-color: #6546AE;
+	background-color: var(--bg-dark);
+	border-color: var(--bg-dark);
 	cursor: pointer;
 }
 
 .colWithBorder {
-	border-right: 1px solid rgb(20, 20, 24);
+	border-right: 2px solid var(--complement-color);
 }
 
 .form-group {
@@ -137,9 +142,8 @@ label, .form-check-label {
 }
 
 .schools-group {
-	color: rgb(20, 20, 24);
-	border-top: 1px solid rgb(20, 20, 24);
-	border-bottom: 1px solid rgb(20, 20, 24);
+	border-top: 1px solid var(--complement-color);
+	border-bottom: 1px solid var(--complement-color);
 	padding-top: 1rem;
 	margin: 1rem 0 2rem 0;
 }
@@ -159,12 +163,7 @@ label, .form-check-label {
     </style>
 </head>
 <body>
-	<div class="jumbotron text-center">
-		<br/>
-		<h1>Register for HackBI</h1>
-		<br/><br/>
-		<a href="/"><div id="returnToHome">Return to Main Page</div></a>
-	</div>
+	<div class="jumbotron text-center"><br/>Register for HackBI<br/><br/></div>
 
 	<div class="row text-center" id="steps">
 		<div class="col-sm-6 colWithBorder col">
@@ -432,6 +431,13 @@ label, .form-check-label {
 			</div>
 		</div>
 	</form>
+</div>
+
+</div class="row">
+	<div class="col-sm-12 text-center" id="confirmation-info">
+		<h3>Done here?</h3>
+		<a href="index" class="make-translucent">Click here to head back to the main HackBI page</a><br/>
+	</div>
 </div>
 
 <div class="learn-more" id="bottom-bar">
