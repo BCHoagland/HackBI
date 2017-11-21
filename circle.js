@@ -7,7 +7,7 @@ function setup() {
 	noFill();
 	noiseSeed(random(100));
 	// startcol = random(255);
-	startcol = 40.45003697769573;
+	// startcol = 40.45003697769573;
 }
 
 function draw() {
@@ -29,10 +29,19 @@ function draw() {
 			sy = cy + v.y;
 		}
 	}
+
 	colorMode(HSB);
-	var hue = cx / 10 - startcol;
-	if(hue < 0) hue += 255;
-	stroke(hue, 100, 120);
+	var hue = map(cx, 0, width, -20, 50);
+	if (hue < 0) {
+		hue = 360 + hue;
+	}
+	stroke(hue, 100, 100);
+
+	// colorMode(RGB);
+	// var g = map(cx, 0, width, 0, 215);
+	// var b = map(cx, 0, width, 102, 0);
+	// stroke(255, g, b);
+
 	strokeWeight(0.1);
 	vertex(sx, sy);
 	endShape();
