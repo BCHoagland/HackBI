@@ -1,9 +1,9 @@
 //sets proper formatting for jumbotron and info panels based on device
 function formatForDesktopOrMobile() {
 	$screenWidth = $(window).width();
-	if ($screenWidth >= 768) {
+	// if ($screenWidth >= 768) {
 		setJumbotronHeight(true);
-	}
+	// }
 }
 
 //reveal .hideme elements when they enter the window

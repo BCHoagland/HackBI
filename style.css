@@ -223,6 +223,10 @@ canvas {
 	margin-bottom: 20px;
 }
 
+#mobileSchedule {
+  display: none;
+}
+
 /*FAQ*/
 .faq {
 	/*color: #fff;*/
@@ -324,40 +328,13 @@ canvas {
   transform: translate(-5px, -5px);
 }*/
 
-
-
-
-/*YOU CAN PROBABLY REMOVE THE REGISTER BAR STUFF CAUSE THAT'S NOT A THING ANYMORE*/
-
-
-
-
-
-
-/**********REGISTER BAR**********/
+/**********BOTTOM BAR**********/
 .learn-more {
 	/*font-family: Consolas, 'Andale Mono', Helvetica, sans-serif;*/
 	font-family: Montserrat, Metrophobic;
 	text-align: center;
 	/*transition: background-color 0.4s;*/
 }
-
-#register {
-  background-color: rgb(20, 20, 20);
-	/*animation: barber 400s infinite linear;
-	background-size: 226px 226px;
-	background-position-x: 100%;*/
-	background-size: cover;
-	padding-top: 40px;
-	padding-bottom: 60px;
-  margin-top: 10rem;
-}
-
-/*#register .row:first-child .box {
-	border-bottom: 2px solid var(--complement-color);
-	padding-bottom: 2em;
-	margin-bottom: 2em;
-}*/
 
 .make-translucent:hover, .learn-more .make-translucent:hover {
 	opacity: 0.7;
@@ -390,6 +367,7 @@ canvas {
 
 .fa:hover {
     opacity: 0.7;
+    text-decoration: none;
 }
 
 /**********MEDIA QUERIES**********/
@@ -421,9 +399,17 @@ canvas {
 		font-size: 7rem;
 	}
 
-	.map #map {
+  #mobileSchedule {
+    display: inherit;
+  }
+
+  #desktopSchedule, #scheduleScroll {
+    display: none;
+  }
+
+	/*.map #map {
 		height: 80vmin;
-	}
+	}*/
 
 	.sponsors h1 {
 		font-size: 1.4em;
@@ -448,9 +434,17 @@ canvas {
 		padding-bottom: 10em;
 	}
 
-	.map #map {
+  #mobileSchedule {
+    display: inherit;
+  }
+
+  #desktopSchedule, #scheduleScroll {
+    display: none;
+  }
+
+	/*.map #map {
 		height: 80vmin;
-	}
+	}*/
 
 	.sponsors .logos img {
 		max-height: 150px;
@@ -471,7 +465,15 @@ canvas {
 		padding-bottom: 10em;
 	}
 
-	.map #map {
+  #mobileSchedule {
+    display: none;
+  }
+
+  #desktopSchedule, #scheduleScroll {
+    display: inherit;
+  }
+
+	/*.map #map {
 		height: 60vmin;
-	}
+	}*/
 }
