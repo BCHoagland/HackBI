@@ -362,6 +362,7 @@ canvas {
     text-decoration: none;
     position: relative;
     left: -10px;
+    margin-top: 1rem;
     margin-bottom: 4rem;
 }
 
