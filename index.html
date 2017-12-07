@@ -17,13 +17,13 @@
 <body>
 	<div class="nav">
 		<!--<div class="container">-->
-			<br/>
-			<ul class="pull-left">
-				<li><a id="scheduleLink" href="#scheduleScroll">Schedule</a></li>
-				<li><a id="faqLink" href="#faqScroll">FAQ</a></li>
-				<!--<li><a id="mapLink" href="#mapScroll">Map</a></li>-->
-				<li><a id="registerLink" href="#main">Register</a></li>	<!--if you move the register button, this will have to change-->
-			</ul>
+		<br/>
+		<ul class="pull-left">
+			<li><a id="scheduleLink" href="#scheduleScroll">Schedule</a></li>
+			<li><a id="faqLink" href="#faqScroll">FAQ</a></li>
+			<!--<li><a id="mapLink" href="#mapScroll">Map</a></li>-->
+			<li><a id="registerLink" href="#main">Register</a></li>	<!--if you move the register button, this will have to change-->
+		</ul>
 		<!--</div>-->
 	</div>
 
@@ -35,7 +35,7 @@
 				<div class="col-sm-12 logo-text pop-in" id="main-text">
 					<h1>HACK BI</h1>
 					<br/><br/><br/><br/>
-					<a href="register"><div class="register-text pop-in" id="registerScroll">Register</div></a>
+					<a id="registerButton" href="register"><div class="register-text pop-in" id="registerScroll">Register</div></a>
 					<!--<br/><br/>
 					<h2 class="info-text pop-in">Bishop Ireton High School</h2>
 					<h2 class="info-text pop-in">January 20 - 21, 2018</h2>-->
@@ -73,9 +73,13 @@
 					<h1>Schedule</h1>
 				</div>
 				<div id="desktopSchedule">
+					<div class="col-sm-12 scheduleTitle">
+						<div class="col-sm-6">
+							<h1>Saturday, January 20</h1>
+						</div>
+					</div>
 					<div class="col-sm-6 box">
 						<div class="schedule" style="text-align:right;">
-							<h1>Saturday, January 20</h1>
 							<h3><span>8:00 - 9:00 AM:</span></h3>
 							<h3><span>9:00 - 10:30 AM:</span></h3>
 							<h3><span>10:30 AM - Noon:</span></h3>
@@ -86,17 +90,10 @@
 							<h3><span>6:30 - 7:30 PM:</span></h3>
 							<h3><span>7:30 - 10:00 PM:</span></h3>
 							<h3><span>10:00 PM - Midnight:</span></h3>
-							<br/>
-							<h1>Sunday, January 21</h1>
-							<h3><span>Midnight:</span></h3>
-							<h3><span>12:30 - 6:00 AM:</span></h3>
-							<h3><span>7:30 AM:</span></h3>
-							<h3><span>8:00 - 9:00 AM:</span></h3>
 						</div>
 					</div>
 					<div class="col-sm-6 box">
 						<div class="schedule">
-							<h1><br/></h1>
 							<h3>Check In</h3>
 							<h3>Opening Ceremony</h3>
 							<h3>Beginner Workshop Sessions</h3>
@@ -107,8 +104,23 @@
 							<h3>Dinner</h3>
 							<h3>Project Development Block 2</h3>
 							<h3>Advanced Workshop Session 2</h3>
-							<br/>
-							<h1><br/></h1>
+						</div>
+					</div>
+					<div class="col-sm-12 scheduleTitle">
+						<div class="col-sm-6">
+							<h1>Sunday, January 21</h1>
+						</div>
+					</div>
+					<div class="col-sm-6 box">
+						<div class="schedule" style="text-align:right;">
+							<h3><span>Midnight:</span></h3>
+							<h3><span>12:30 - 6:00 AM:</span></h3>
+							<h3><span>7:30 AM:</span></h3>
+							<h3><span>8:00 - 9:00 AM:</span></h3>
+						</div>
+					</div>
+					<div class="col-sm-6 box">
+						<div class="schedule">
 							<h3>Midnight Snack</h3>
 							<h3>Quiet Hacking Time</h3>
 							<h3>Hacking Ends</h3>
@@ -118,6 +130,12 @@
 				</div>
 			</div>
 		</div>
+	</div>
+
+	<div class="con" id="con1">
+		<svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
+			<path id="path1" d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none;"></path>
+		</svg>
 	</div>
 
 	<div class="faq">
@@ -179,30 +197,18 @@
 		</div>
 	</div>
 
-	<!--<div class="map">
-		<div class="container" id="map-container">
-			<div class="row">
-				<div class="col-sm-4"></div>
-				<div class="col-sm-4 address" id="mapScroll">
-					<h1>Bishop Ireton High School</h1>
-					<h3>201 Cambridge Rd</h3>
-					<h3>Alexandria, VA 22314</h3>
-				</div>
-				<div class="col-sm-12">
-					<div id="map">
-						<h4>rip there was supposed to be a map here</h4>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>-->
+	<div class="con" id="con2">
+		<svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
+			<path id="path2" d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z"></path>
+		</svg>
+	</div>
 
 	<div class="sponsors">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 header">
-					<h1>Special thanks to all of HackBI's sponsors:</h1>
-					<a href="files/sponsor-perks.pdf"><h1 class="make-translucent">Interested in being a sponsor? Find out more here!</h1></a><br/>
+					<h1><b>Sponsors</b></h1>
+					<a href="files/sponsor-perks.pdf"><h2 class="make-translucent">Interested in being a sponsor? Find out more here!</h2></a><br/><br/><br/>
 				</div>
 				<div class="col-sm-4 logos">
 					<a href="https://mlh.io"><img class="img-responsive hideme" src="img/mlh-white.png" alt="MLH"/></a><br/><br/>
@@ -217,22 +223,28 @@
 		</div>
 	</div>
 
+	<div class="con" id="con3">
+		<svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
+			<path id="path3" d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z"></path>
+		</svg>
+	</div>
+
 	<div class="learn-more" id="bottom-bar">
-			<br/><br/><p><a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct</a></p>
-			<p><a href="https://github.com/MLH/mlh-policies/blob/master/data-sharing.md">MLH Data Sharing Provision</a></p>
-			<a href="https://www.facebook.com/HackBIOfficial/" class="fa fa-facebook make-translucent"></a>
-			<a href="https://www.twitter.com/HackBIOfficial" class="fa fa-twitter make-translucent"></a>
+		<br/><br/><p><a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct</a></p>
+		<p><a href="https://github.com/MLH/mlh-policies/blob/master/data-sharing.md">MLH Data Sharing Provision</a></p>
+		<a href="https://www.facebook.com/HackBIOfficial/" class="fa fa-facebook make-translucent"></a>
+		<a href="https://www.twitter.com/HackBIOfficial" class="fa fa-twitter make-translucent"></a>
 	</div>
 
 	<!--<script type="text/javascript">
 	function myMap() {
-        var mapOptions = {
-            center: new google.maps.LatLng(38.809081, -77.080936), zoom: 15, mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-		}
-	</script>-->
-	<script src="script.js"></script>
-	<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANzJG2lRUPqaghioGhb47PX4xlxN0Eaho&callback=myMap"></script>-->
+	var mapOptions = {
+	center: new google.maps.LatLng(38.809081, -77.080936), zoom: 15, mapTypeId: google.maps.MapTypeId.ROADMAP
+}
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+</script>-->
+<script src="script.js"></script>
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANzJG2lRUPqaghioGhb47PX4xlxN0Eaho&callback=myMap"></script>-->
 </body>
 </html>

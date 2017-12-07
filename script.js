@@ -1,11 +1,3 @@
-//sets proper formatting for jumbotron and info panels based on device
-function formatForDesktopOrMobile() {
-	$screenWidth = $(window).width();
-	// if ($screenWidth >= 768) {
-		setJumbotronHeight(true);
-	// }
-}
-
 //reveal .hideme elements when they enter the window
 function updateHideShow() {
 	$('.hideme').each( function(i) {
@@ -20,25 +12,25 @@ function updateHideShow() {
 //check to see if nav bar's background should be added/removed
 function updateNavBar() {
 	var bottom_of_nav = $(window).scrollTop() + $('.nav').height();
-	if (bottom_of_nav > $(window).height()) {
-		$('.nav').css('background', 'rgba(20, 20, 24, 0.9)');
-	} else if (bottom_of_nav < $(window).height()) {
+	var threshold = $(window).height() + $('.info').height();
+	if (bottom_of_nav > threshold) {
+		$('.nav').css('background', 'var(--main-color)');
+	} else if (threshold) {
 		$('.nav').css('background', 'transparent');
 	}
 }
 
 //set the jumbotron height to fill the screen
 //vertically center logo text if user is on dekstop
-function setJumbotronHeight(desktop) {
+function setJumbotronHeight() {
 	$screenHeight = $(window).height();
 	$('.main').css('height', $screenHeight + "px");
 
 	$mainTextHeight = $('#main-text').height();
-	$topMargin = (($screenHeight - ($mainTextHeight * 1.75)) / 2);
+	// $topMargin = (($screenHeight - ($mainTextHeight * 1.75)) / 2);
+	$topMargin = ($screenHeight / 2) - ($mainTextHeight / 1.5);
 
-	if (desktop) {
-		$('#main-text').css('margin-top', $topMargin + "px");
-	}
+	$('#main-text').css('margin-top', $topMargin + "px");
 }
 
 //<3 easter eggs
@@ -75,17 +67,17 @@ $('#registerLink').click(function() {
 });
 
 $(document).ready(function() {
-	formatForDesktopOrMobile();
+	setJumbotronHeight();
 	updateHideShow();
-	updateNavBar();
+	// updateNavBar();
 	$('canvas').css({'width': $(window).width(), 'height': $(window).height() * 1.5});
 
 	$(window).scroll(function() {
 		updateHideShow();
-		updateNavBar();
+		// updateNavBar();
 	});
 	$(window).resize(function () {
-		formatForDesktopOrMobile();
+		setJumbotronHeight();
 		$('canvas').css({'width': $(window).width(), 'height': $(window).height() * 1.5});
 	});
 
