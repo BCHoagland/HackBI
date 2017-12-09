@@ -76,12 +76,6 @@ path {
 
 
 :root {
-	/*purple theme*/
-	/*--bg-light: #606dbc;
-	--bg-dark: #465298;
-	--complement-color: #fc3d45;*/
-
-	/*red theme*/
 	--main-color: #fc4d45;
   --secondary-color: #ffb347;
   --third-color: #ff9340;
@@ -91,7 +85,6 @@ path {
 }
 
 body {
-  /*background: rgb(20, 20, 24);*/
   background: var(--main-color);
 	min-width: 440px;
 }
@@ -175,7 +168,6 @@ body {
 }
 
 .main .row, .info .row, .faq .row, .sponsors .row, .map .row {
-	/*font-family: Consolas, 'Andale Mono', Helvetica, sans-serif;*/
 	font-family: Montserrat, Metrophobic;
 	padding: 20px;
 	margin-top: 20px;
@@ -295,7 +287,6 @@ canvas {
   color: white;
 	text-align: center;
 	margin-right: 0;
-  /*background-color: white;*/
   background-color: var(--secondary-color);
 	background-size: cover;
 }
@@ -327,9 +318,6 @@ canvas {
 	font-weight: bold;
 	padding-bottom: 15px;
 	margin-top: 0;
-  /*background: -webkit-linear-gradient(-45deg, #f06, #ffd700);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;*/
 }
 
 .faq .qa h3:last-child {
@@ -359,10 +347,10 @@ canvas {
 .sponsors .logos img {
   color: white;
   font-size: 2em;
-	display: block;
+	display: inline-block;
 	/*max-height: 200px;*/
-	padding: 2rem;
-	margin: auto;
+  padding: 1rem;
+	margin: 2rem;
   transition: transform 0.5s;
 }
 
