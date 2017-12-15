@@ -49,6 +49,14 @@ path {
   fill: var(--third-color);
 }
 
+#path4 {
+  fill: var(--main-color);
+}
+
+#path5 {
+  fill: white;
+}
+
 .con {
   display: inline-block;
   position: relative;
@@ -56,21 +64,27 @@ path {
   padding-bottom: 30%;
   vertical-align: middle;
   overflow: hidden;
+  margin-top: -14%;
 }
 
 #con1 {
   background-color: var(--secondary-color);
-  margin-top: -16%;
 }
 
 #con2 {
   background-color: var(--third-color);
-  margin-top: -10%;
 }
 
 #con3 {
   background-color: #eee;
-  margin-top: -12%;
+}
+
+#con4 {
+  background-color: white;
+}
+
+#con5 {
+  background-color: #eee;
 }
 
 
@@ -109,10 +123,10 @@ body {
 	width: 100%;
 	height: 4.4em;
 	z-index: 10000;
-  /*-webkit-transition: background 0.4s;
-	-moz-transition: background 0.4s;
-	-o-transition: background 0.4s;
-	transition: background 0.4s;*/
+  -webkit-transition: opacity 0.4s;
+	-moz-transition: opacity 0.4s;
+	-o-transition: opacity 0.4s;
+	transition: opacity 0.4s;
 }
 
 .nav ul {
@@ -183,16 +197,8 @@ body {
 }
 
 /*MAIN*/
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -100;
-  opacity: 0;
-}
-
 .main {
-  background: transparent;
+  background: var(--main-color);
 	background-size: cover;
 	text-align: center;
 }
@@ -243,7 +249,7 @@ canvas {
 .info {
   color: white;
 	text-align: center;
-  background: transparent;
+  background: var(--main-color);
 }
 
 .info h1 {
@@ -362,6 +368,7 @@ canvas {
 .learn-more {
 	/*font-family: Consolas, 'Andale Mono', Helvetica, sans-serif;*/
 	font-family: Montserrat, Metrophobic;
+  font-weight: bold;
 	text-align: center;
 	/*transition: background-color 0.4s;*/
 }

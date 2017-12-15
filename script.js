@@ -10,13 +10,21 @@ function updateHideShow() {
 }
 
 //check to see if nav bar's background should be added/removed
-function updateNavBar() {
+//check to see if page's background color should be changed
+function updateBgs() {
 	var bottom_of_nav = $(window).scrollTop() + $('.nav').height();
-	var threshold = $(window).height() + $('.info').height();
+	var threshold = $(window).height();
+
 	if (bottom_of_nav > threshold) {
-		$('.nav').css('background', 'var(--main-color)');
-	} else if (threshold) {
-		$('.nav').css('background', 'transparent');
+		$('.nav').css('opacity', '0');
+	} else if (bottom_of_nav < threshold) {
+		$('.nav').css('opacity', '1');
+	}
+
+	if (bottom_of_nav > threshold * 2) {
+		$('body').css('background-color', '#eee');
+	} else if (bottom_of_nav < threshold * 2) {
+		$('body').css('background-color', 'var(--main-color)');
 	}
 }
 
@@ -69,13 +77,14 @@ $('#registerLink').click(function() {
 $(document).ready(function() {
 	setJumbotronHeight();
 	updateHideShow();
-	// updateNavBar();
+	updateBgs();
 	$('canvas').css({'width': $(window).width(), 'height': $(window).height() * 1.5});
 
 	$(window).scroll(function() {
 		updateHideShow();
-		// updateNavBar();
+		updateBgs();
 	});
+
 	$(window).resize(function () {
 		setJumbotronHeight();
 		$('canvas').css({'width': $(window).width(), 'height': $(window).height() * 1.5});
