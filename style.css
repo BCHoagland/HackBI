@@ -123,10 +123,10 @@ body {
 	width: 100%;
 	height: 4.4em;
 	z-index: 10000;
-  -webkit-transition: opacity 0.4s;
-	-moz-transition: opacity 0.4s;
-	-o-transition: opacity 0.4s;
-	transition: opacity 0.4s;
+  -webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
 }
 
 .nav ul {
