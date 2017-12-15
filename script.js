@@ -18,8 +18,7 @@ function updateBgs() {
 	if (bottom_of_nav > threshold) {
 		$('.nav').css({'opacity': '0', 'top': '-50px'});
 	} else if (bottom_of_nav < threshold) {
-		$('.nav').css({'opacity': '0', 'top': '0'});
-		$('.nav').css('opacity', '1');
+		$('.nav').css({'opacity': '1', 'top': '0'});
 	}
 
 	if (bottom_of_nav > threshold * 2) {
