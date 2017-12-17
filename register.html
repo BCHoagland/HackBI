@@ -224,7 +224,7 @@
 
 			<div class="form-group grade">
 				<label for="grade">Grade</label>
-				<select class="form-control" name="grade" id="grade">
+				<select class="form-control" name="grade" id="grade" oninvalid="this.setCustomValidity('We need to know which grade you're in')" oninput="setCustomValidity('')" required>
 					<option disabled selected value></option>
 					<option>9</option>
 					<option>10</option>
