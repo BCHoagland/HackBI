@@ -52,7 +52,8 @@ function checkCode() {
 			givenCode = [];
 		} else {
 			if (i == (code.length - 1)) {
-				window.location.href = "1/2/3/4/shook/spooked.png";
+				//window.location.href = "1/2/3/4/shook/spooked.png";
+				window.location.href = "1/2/3/4/shook/sonic.jpeg";
 			}
 		}
 	}
